@@ -5,7 +5,7 @@
     </uie:Toolbar>
     <SplitView fixed-pane-initial-dimension="250" name="SplitView">
         <ui:VisualElement name="left-panel" style="flex-grow: 1;">
-            <ui:Label tabindex="-1" text="Inspector" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgb(41, 41, 41); color: rgb(196, 196, 196); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+            <ui:Label tabindex="-1" text="Node Info" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgb(41, 41, 41); color: rgb(196, 196, 196); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
             <InspectorView />
         </ui:VisualElement>
         <ui:VisualElement name="right-panel" style="flex-grow: 1;">

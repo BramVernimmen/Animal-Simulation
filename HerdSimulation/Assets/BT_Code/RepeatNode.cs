@@ -20,11 +20,12 @@ public class RepeatNode : DecoratorNode
 
     protected override State OnUpdate()
     {
-        currentAmountOfLoops++;
-        child.Update();
+        if (child.Update() != State.Success)
+            return State.Running;
 
-        if (amountOfLoops == -1 || currentAmountOfLoops < amountOfLoops) 
-        { 
+        if (amountOfLoops == -1 || currentAmountOfLoops + 1 < amountOfLoops) 
+        {
+            currentAmountOfLoops++;
             return State.Running;
         }
 
