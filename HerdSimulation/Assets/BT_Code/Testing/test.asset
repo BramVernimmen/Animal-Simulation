@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8b25a5a9aa72d744787c304a9a668fb6
-  position: {x: 977, y: 469}
+  position: {x: 408.15002, y: 475.99997}
 --- !u!114 &-7027342514256361377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 4c0dbf241ce6fe7449b0fdf1ab0d0a84
-  position: {x: 494, y: -64.5}
+  position: {x: 546.6, y: 162.00002}
 --- !u!114 &-5362351241566372576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8392122b159f00145920546cd15e38d0
-  position: {x: 977, y: 205}
+  position: {x: 284.90002, y: 324.15002}
   duration: 3
 --- !u!114 &-3398609240475234505
 MonoBehaviour:
@@ -64,7 +64,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 696c6c3e4b6d4f04097fc96a5682c286
-  position: {x: 977, y: 359}
+  position: {x: 697, y: 324.00003}
   duration: 2
 --- !u!114 &-1486550687281910218
 MonoBehaviour:
@@ -81,7 +81,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 237bbd5b104060845acce905bbd55741
-  position: {x: 977, y: 128}
+  position: {x: -84.80002, y: 476.2501}
   message: 22222222
 --- !u!114 &-1246754270479111526
 MonoBehaviour:
@@ -98,7 +98,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f07efac9025c6ab47829d66d2e19cf7c
-  position: {x: 977, y: -26}
+  position: {x: -260.80002, y: 476.2501}
   message: 11111111
 --- !u!114 &-722918027956739866
 MonoBehaviour:
@@ -115,7 +115,25 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c715ee0a93783d54780823d62caf1139
-  position: {x: 551.5, y: 243}
+  position: {x: -217.99997, y: 162.00002}
+--- !u!114 &-420776231909894287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462a28ba5c123c04cb4acf7a7bb93d0a, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4ba91c0674e5e92418272887cfdc5753
+  position: {x: 13, y: 184.5}
+  child: {fileID: 7465053570654617780}
+  amountOfLoops: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +161,9 @@ MonoBehaviour:
   - {fileID: -7027342514256361377}
   - {fileID: -722918027956739866}
   - {fileID: -7500877712371003065}
+  - {fileID: -420776231909894287}
+  - {fileID: 6875135088231771432}
+  - {fileID: 6427539838662176883}
 --- !u!114 &895408292970761978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +179,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1639824552b16f542983a33ae281e28f
-  position: {x: 1, y: 154}
+  position: {x: 13.000038, y: -75.99997}
   child: {fileID: 2666654291175043400}
 --- !u!114 &2666654291175043400
 MonoBehaviour:
@@ -175,11 +196,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a15297e6ca93fc049803e659f367346d
-  position: {x: 259, y: 154}
+  position: {x: 13.000038, y: 21.00003}
   children:
-  - {fileID: -7027342514256361377}
-  - {fileID: 7465053570654617780}
   - {fileID: -722918027956739866}
+  - {fileID: -420776231909894287}
+  - {fileID: 6875135088231771432}
+  - {fileID: -7027342514256361377}
 --- !u!114 &4777543080613231924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +217,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: bb9dd1e96307a3f4193330f15042d762
-  position: {x: 977, y: 282}
+  position: {x: 241.15002, y: 475.99997}
   message: 3333333
 --- !u!114 &4918957667945644175
 MonoBehaviour:
@@ -212,8 +234,45 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f7c2e966d8566724491bd0e63026af4f
-  position: {x: 977, y: 51}
+  position: {x: 88.00006, y: 475.99997}
   duration: 2
+--- !u!114 &6427539838662176883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5af68ac66df9da40b9acb6d712aebd8, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 48207b3885846e34ea7dba3c4a47147c
+  position: {x: 472, y: 324.00003}
+  message: awefezf
+--- !u!114 &6875135088231771432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66e7d9820ae04144a92aeb787a315af, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ec8134387a2a0f341818fb3ab706e445
+  position: {x: 306, y: 171}
+  children:
+  - {fileID: -5362351241566372576}
+  - {fileID: 6427539838662176883}
+  - {fileID: -3398609240475234505}
 --- !u!114 &7465053570654617780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,12 +288,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: cdc328f0d1815164289c218dd86b8b99
-  position: {x: 718, y: 154}
+  position: {x: 13, y: 313}
   children:
   - {fileID: -1246754270479111526}
-  - {fileID: 4918957667945644175}
   - {fileID: -1486550687281910218}
-  - {fileID: -5362351241566372576}
+  - {fileID: 4918957667945644175}
   - {fileID: 4777543080613231924}
-  - {fileID: -3398609240475234505}
   - {fileID: -7500877712371003065}
