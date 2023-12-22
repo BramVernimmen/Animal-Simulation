@@ -11,8 +11,10 @@ public abstract class Node : ScriptableObject
         Success
     }
 
-    public State state = State.Running;
-    public bool started = false;
+    [HideInInspector] public State state = State.Running;
+    [HideInInspector] public bool started = false;
+    [HideInInspector] public string guid;
+    [HideInInspector] public Vector2 position;
     
     public State Update()
     {

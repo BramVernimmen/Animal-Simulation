@@ -4,6 +4,9 @@ using UnityEngine.UIElements;
 
 public class BehaviourTreeEditor : EditorWindow
 {
+    BehaviourTreeView treeView;
+    InspectorView inspectorView;
+
     [MenuItem("Behaviour Tree/Editor")]
     public static void OpenWindow()
     {
@@ -21,6 +24,11 @@ public class BehaviourTreeEditor : EditorWindow
 
 
         FindAndSetStyleSheet(root);
+
+        treeView = root.Q<BehaviourTreeView>();
+        inspectorView = root.Q<InspectorView>();
+        treeView.OnNodeSelected = OnNodeSelectionChanged;
+        OnSelectionChange();
     }
    
     void CloneVisualTree(VisualElement root)
@@ -73,4 +81,18 @@ public class BehaviourTreeEditor : EditorWindow
         }
     }
 
+
+    private void OnSelectionChange()
+    {
+        BehaviourTree tree = Selection.activeObject as BehaviourTree;
+        if (tree)
+        {
+            treeView.PopulateView(tree);
+        }
+    }
+
+    void OnNodeSelectionChanged(NodeView nodeView)
+    {
+        inspectorView.UpdateSelection(nodeView);
+    }
 }
