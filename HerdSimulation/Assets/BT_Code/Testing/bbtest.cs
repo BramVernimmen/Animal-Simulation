@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Blackboard : MonoBehaviour
+public class bbtest : Blackboard
 {
-    public Vector3 moveToPos;
-    public GameObject moveToObject;
+    public string testString = new string("Test");
 }
