@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using Unity.VisualScripting;
+using System;
 
 [CreateAssetMenu()]
 public class BehaviourTree : ScriptableObject
@@ -10,7 +11,7 @@ public class BehaviourTree : ScriptableObject
     public Node rootNode;
     public Node.State treeState = Node.State.Running;
     public List<Node> nodes = new List<Node>();
-
+    public Blackboard blackboard;
     public Node.State Update()
     {
         // we return if we have a failure
@@ -151,5 +152,13 @@ public class BehaviourTree : ScriptableObject
             tree.nodes.Add(n);
         });
         return tree;
+    }
+
+    public void Bind()
+    {
+        Traverse(rootNode, node =>
+        {
+            node.blackboard = blackboard;
+        });
     }
 }

@@ -11,6 +11,7 @@ public class BehaviourTreeRunner : MonoBehaviour
         // we clone the entire tree
         // otherwise all the trees would be the same
         tree = tree.Clone();
+        tree.Bind(); // gives the correct blackboard to each node
     }
 
     void Update()

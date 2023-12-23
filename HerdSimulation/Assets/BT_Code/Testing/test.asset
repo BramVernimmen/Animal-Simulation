@@ -15,7 +15,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8b25a5a9aa72d744787c304a9a668fb6
-  position: {x: 408.15002, y: 475.99997}
+  position: {x: 475.99997, y: 486.35004}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
 --- !u!114 &-7027342514256361377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,6 +36,10 @@ MonoBehaviour:
   started: 0
   guid: 4c0dbf241ce6fe7449b0fdf1ab0d0a84
   position: {x: 546.6, y: 162.00002}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
 --- !u!114 &-5362351241566372576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,7 +55,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8392122b159f00145920546cd15e38d0
-  position: {x: 284.90002, y: 324.15002}
+  position: {x: 195.60004, y: 324.00003}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
   duration: 3
 --- !u!114 &-3398609240475234505
 MonoBehaviour:
@@ -64,7 +76,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 696c6c3e4b6d4f04097fc96a5682c286
-  position: {x: 697, y: 324.00003}
+  position: {x: 515.6, y: 324.00003}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
   duration: 2
 --- !u!114 &-1486550687281910218
 MonoBehaviour:
@@ -81,7 +97,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 237bbd5b104060845acce905bbd55741
-  position: {x: -84.80002, y: 476.2501}
+  position: {x: -46.999996, y: 582.80005}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
   message: 22222222
 --- !u!114 &-1246754270479111526
 MonoBehaviour:
@@ -99,6 +119,10 @@ MonoBehaviour:
   started: 0
   guid: f07efac9025c6ab47829d66d2e19cf7c
   position: {x: -260.80002, y: 476.2501}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
   message: 11111111
 --- !u!114 &-722918027956739866
 MonoBehaviour:
@@ -112,10 +136,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9570a2e82dd858f4097cad42b6607fe4, type: 3}
   m_Name: FailureNode
   m_EditorClassIdentifier: 
-  state: 0
+  state: 1
   started: 0
   guid: c715ee0a93783d54780823d62caf1139
   position: {x: -217.99997, y: 162.00002}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: This node will always fail
 --- !u!114 &-420776231909894287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,10 +157,14 @@ MonoBehaviour:
   m_Name: RepeatNode
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   guid: 4ba91c0674e5e92418272887cfdc5753
-  position: {x: 13, y: 184.5}
-  child: {fileID: 7465053570654617780}
+  position: {x: -47.050007, y: 476.00006}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
+  child: {fileID: -1486550687281910218}
   amountOfLoops: 2
 --- !u!114 &11400000
 MonoBehaviour:
@@ -164,6 +196,9 @@ MonoBehaviour:
   - {fileID: -420776231909894287}
   - {fileID: 6875135088231771432}
   - {fileID: 6427539838662176883}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
 --- !u!114 &895408292970761978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,9 +212,13 @@ MonoBehaviour:
   m_Name: RootNode
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   guid: 1639824552b16f542983a33ae281e28f
   position: {x: 13.000038, y: -75.99997}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
   child: {fileID: 2666654291175043400}
 --- !u!114 &2666654291175043400
 MonoBehaviour:
@@ -194,12 +233,16 @@ MonoBehaviour:
   m_Name: SelectorNode
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   guid: a15297e6ca93fc049803e659f367346d
   position: {x: 13.000038, y: 21.00003}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: This is a description
   children:
   - {fileID: -722918027956739866}
-  - {fileID: -420776231909894287}
+  - {fileID: 7465053570654617780}
   - {fileID: 6875135088231771432}
   - {fileID: -7027342514256361377}
 --- !u!114 &4777543080613231924
@@ -217,7 +260,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: bb9dd1e96307a3f4193330f15042d762
-  position: {x: 241.15002, y: 475.99997}
+  position: {x: 308.99994, y: 486.35004}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
   message: 3333333
 --- !u!114 &4918957667945644175
 MonoBehaviour:
@@ -234,7 +281,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f7c2e966d8566724491bd0e63026af4f
-  position: {x: 88.00006, y: 475.99997}
+  position: {x: 155.99994, y: 486.35004}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
   duration: 2
 --- !u!114 &6427539838662176883
 MonoBehaviour:
@@ -251,7 +302,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 48207b3885846e34ea7dba3c4a47147c
-  position: {x: 472, y: 324.00003}
+  position: {x: 361.6, y: 324.00003}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
   message: awefezf
 --- !u!114 &6875135088231771432
 MonoBehaviour:
@@ -269,6 +324,10 @@ MonoBehaviour:
   started: 0
   guid: ec8134387a2a0f341818fb3ab706e445
   position: {x: 306, y: 171}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
   children:
   - {fileID: -5362351241566372576}
   - {fileID: 6427539838662176883}
@@ -288,10 +347,14 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: cdc328f0d1815164289c218dd86b8b99
-  position: {x: 13, y: 313}
+  position: {x: 12.9999695, y: 300.00003}
+  blackboard:
+    moveToPos: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  description: 
   children:
   - {fileID: -1246754270479111526}
-  - {fileID: -1486550687281910218}
+  - {fileID: -420776231909894287}
   - {fileID: 4918957667945644175}
   - {fileID: 4777543080613231924}
   - {fileID: -7500877712371003065}

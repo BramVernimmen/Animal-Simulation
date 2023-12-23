@@ -79,6 +79,8 @@
 
 #description {
     font-size: 12px;
+    white-space: normal;
+    max-width: 150px;
 }
 
 #divider {

@@ -28,8 +28,11 @@ public class BehaviourTreeView : GraphView
 
     private void OnUndoRedo()
     {
-        PopulateView(tree);
-        AssetDatabase.SaveAssets();
+        if (tree != null)
+        {
+            PopulateView(tree);
+            AssetDatabase.SaveAssets();
+        }
     }
 
     void FindAndSetStyleSheet()

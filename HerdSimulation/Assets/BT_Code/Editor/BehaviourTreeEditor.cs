@@ -9,6 +9,10 @@ public class BehaviourTreeEditor : EditorWindow
 {
     BehaviourTreeView treeView;
     InspectorView inspectorView;
+    IMGUIContainer blackboardView;
+
+    SerializedObject treeObject;
+    SerializedProperty blackboardProperty;
 
     [MenuItem("Behaviour Tree/Editor")]
     public static void OpenWindow()
@@ -42,6 +46,16 @@ public class BehaviourTreeEditor : EditorWindow
 
         treeView = root.Q<BehaviourTreeView>();
         inspectorView = root.Q<InspectorView>();
+        blackboardView = root.Q<IMGUIContainer>();
+        blackboardView.onGUIHandler = () =>
+        {
+            if (treeObject != null && blackboardProperty != null)
+            {
+                treeObject.Update();
+                EditorGUILayout.PropertyField(blackboardProperty);
+                treeObject.ApplyModifiedProperties();
+            }
+        };
         treeView.OnNodeSelected = OnNodeSelectionChanged;
         OnSelectionChange();
     }
@@ -131,11 +145,15 @@ public class BehaviourTreeEditor : EditorWindow
         {
             if (Selection.activeObject != null)
             {
-                BehaviourTreeRunner runner = Selection.activeObject.GetComponent<BehaviourTreeRunner>();
-                if (runner != null)
+                try
                 {
-                    tree = runner.tree;
+                BehaviourTreeRunner runner = Selection.activeObject.GetComponent<BehaviourTreeRunner>();
+                    if (runner != null)
+                    {
+                        tree = runner.tree;
+                    }
                 }
+                catch(NotSupportedException){}
             }
         }
 
@@ -152,6 +170,12 @@ public class BehaviourTreeEditor : EditorWindow
             {
                 treeView?.PopulateView(tree);
             }
+        }
+
+        if (tree != null)
+        {
+            treeObject = new SerializedObject(tree);
+            blackboardProperty = treeObject.FindProperty("blackboard");
         }
     }
 
