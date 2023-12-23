@@ -14,6 +14,7 @@ public class FailureNode : ActionNode
 
     protected override State OnUpdate()
     {
+        blackboard.moveToPos.x += 1;
         return State.Failure;
     }
 }

@@ -12,7 +12,7 @@
                 </ui:VisualElement>
                 <ui:VisualElement name="blackboard-container" style="flex-grow: 1;">
                     <ui:Label tabindex="-1" text="Blackboard" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgb(41, 41, 41); color: rgb(196, 196, 196); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
-                    <ui:IMGUIContainer />
+                    <ui:Label tabindex="-1" text="Blackboard info will be displayed here!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BlackboardLabel" />
                 </ui:VisualElement>
             </SplitView>
         </ui:VisualElement>
