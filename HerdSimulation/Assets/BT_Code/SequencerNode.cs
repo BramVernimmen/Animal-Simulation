@@ -8,6 +8,14 @@ public class SequencerNode : CompositeNode
     protected override void OnStart()
     {
         current = 0;
+        foreach (Node node in children)
+        {
+            node.finished = false;
+            Recurse(node, (n) =>
+            {
+                n.finished = false;
+            });
+        }
     }
 
     protected override void OnStop()

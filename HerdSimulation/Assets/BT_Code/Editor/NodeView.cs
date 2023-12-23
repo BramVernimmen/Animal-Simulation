@@ -168,10 +168,16 @@ public class NodeView : UnityEditor.Experimental.GraphView.Node
                     }
                     break;
                 case Node.State.Failure:
-                    AddToClassList("failure");
+                    if (node.finished)
+                    {
+                        AddToClassList("failure");
+                    }
                     break;
                 case Node.State.Success:
-                    AddToClassList("success");
+                    if (node.finished)
+                    {
+                        AddToClassList("success");
+                    }
                     break;
             }
         }

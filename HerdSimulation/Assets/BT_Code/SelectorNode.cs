@@ -8,10 +8,20 @@ public class SelectorNode : CompositeNode
     protected override void OnStart()
     {
         current = 0;
+        foreach (Node node in children)
+        {
+            node.finished = false;
+            Recurse(node, (n) =>
+            {
+                n.finished = false;
+            });
+        }
     }
 
     protected override void OnStop()
     {
+        // we have either a success or a failure
+        
     }
 
     protected override State OnUpdate()

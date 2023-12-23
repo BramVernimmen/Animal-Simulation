@@ -13,6 +13,7 @@ public abstract class Node : ScriptableObject
 
     [HideInInspector] public State state = State.Running;
     [HideInInspector] public bool started = false;
+    [HideInInspector] public bool finished = false;
     [HideInInspector] public string guid;
     [HideInInspector] public Vector2 position;
     [HideInInspector] public Blackboard blackboard;
@@ -24,6 +25,7 @@ public abstract class Node : ScriptableObject
         {
             OnStart();
             started = true;
+            finished = false;
         }
 
         state = OnUpdate();
@@ -32,9 +34,30 @@ public abstract class Node : ScriptableObject
         {
             OnStop();
             started = false;
+            finished = true;
         }
 
         return state;
+    }
+
+    public void Recurse(Node node, System.Action<Node> visiter)
+    {
+        if (node)
+        {
+            visiter.Invoke(node);
+
+            CompositeNode compositeNode = node as CompositeNode;
+            if (compositeNode != null) 
+            { 
+                compositeNode.children.ForEach((n) => Recurse(n, visiter));
+            }
+
+            DecoratorNode decoratorNode = node as DecoratorNode;
+            if (decoratorNode != null && decoratorNode.child != null)
+            {
+                visiter.Invoke(decoratorNode.child);
+            }
+        }
     }
 
     public virtual Node Clone()

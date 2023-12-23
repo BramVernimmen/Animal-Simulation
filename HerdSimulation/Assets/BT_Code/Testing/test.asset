@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: 8b25a5a9aa72d744787c304a9a668fb6
-  position: {x: 475.99997, y: 486.35004}
+  position: {x: -6.0000916, y: 546.06366}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &-7027342514256361377
@@ -32,8 +33,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: 4c0dbf241ce6fe7449b0fdf1ab0d0a84
-  position: {x: 546.6, y: 162.00002}
+  position: {x: 231, y: 154}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &-5362351241566372576
@@ -50,11 +52,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: 8392122b159f00145920546cd15e38d0
-  position: {x: 195.60004, y: 324.00003}
+  position: {x: -279, y: 307}
   blackboard: {fileID: 0}
   description: 
   duration: 3
+--- !u!114 &-4270090343518956500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb7d95959b4223479bd4c8a4e045c3e, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 7149c8827e93339409c4112314e734b7
+  position: {x: 305.99997, y: -17.999947}
+  blackboard: {fileID: 0}
+  description: 
+  duration: 3
+--- !u!114 &-4019489542790474348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb7d95959b4223479bd4c8a4e045c3e, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 7a6bf53763d0a6f498517ac16ef7065b
+  position: {x: -766.5176, y: 284.49997}
+  blackboard: {fileID: 0}
+  description: 
+  duration: 5
 --- !u!114 &-3398609240475234505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,11 +112,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: 696c6c3e4b6d4f04097fc96a5682c286
-  position: {x: 515.6, y: 324.00003}
+  position: {x: 82, y: 307}
   blackboard: {fileID: 0}
   description: 
   duration: 2
+--- !u!114 &-2682819679154193704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d41ebbfece92449aaac6f96fee7e46, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 1ed4870da02d35743bb5dbc750bc1bf6
+  position: {x: 305.99997, y: -134.99994}
+  blackboard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -4270090343518956500}
 --- !u!114 &-1486550687281910218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,8 +153,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: 237bbd5b104060845acce905bbd55741
-  position: {x: -46.999996, y: 582.80005}
+  position: {x: -529.00006, y: 643.0636}
   blackboard: {fileID: 0}
   description: 
   message: 22222222
@@ -107,8 +173,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: f07efac9025c6ab47829d66d2e19cf7c
-  position: {x: -260.80002, y: 476.2501}
+  position: {x: -743.0001, y: 536.06366}
   blackboard: {fileID: 0}
   description: 
   message: 11111111
@@ -126,8 +193,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 1
   started: 0
+  finished: 0
   guid: c715ee0a93783d54780823d62caf1139
-  position: {x: -217.99997, y: 162.00002}
+  position: {x: -959.6452, y: 121.00001}
   blackboard: {fileID: 0}
   description: This node will always fail
 --- !u!114 &-420776231909894287
@@ -144,8 +212,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 1
+  finished: 0
   guid: 4ba91c0674e5e92418272887cfdc5753
-  position: {x: -47.050007, y: 476.00006}
+  position: {x: -529.00006, y: 536.06366}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: -1486550687281910218}
@@ -180,6 +249,12 @@ MonoBehaviour:
   - {fileID: -420776231909894287}
   - {fileID: 6875135088231771432}
   - {fileID: 6427539838662176883}
+  - {fileID: -4019489542790474348}
+  - {fileID: 3367242018327408076}
+  - {fileID: 5933885470547171032}
+  - {fileID: -2682819679154193704}
+  - {fileID: 3487981978538351172}
+  - {fileID: -4270090343518956500}
   blackboard: {fileID: 0}
 --- !u!114 &895408292970761978
 MonoBehaviour:
@@ -195,11 +270,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 1
+  finished: 0
   guid: 1639824552b16f542983a33ae281e28f
-  position: {x: 13.000038, y: -75.99997}
+  position: {x: 12.99993, y: -396.11407}
   blackboard: {fileID: 0}
   description: 
-  child: {fileID: 2666654291175043400}
+  child: {fileID: 3487981978538351172}
 --- !u!114 &2666654291175043400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,15 +290,61 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 1
+  finished: 0
   guid: a15297e6ca93fc049803e659f367346d
-  position: {x: 13.000038, y: 21.00003}
+  position: {x: -518.0002, y: -18.000023}
   blackboard: {fileID: 0}
   description: This is a description
   children:
   - {fileID: -722918027956739866}
+  - {fileID: 3367242018327408076}
   - {fileID: 7465053570654617780}
   - {fileID: 6875135088231771432}
   - {fileID: -7027342514256361377}
+--- !u!114 &3367242018327408076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66e7d9820ae04144a92aeb787a315af, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 962b67b9e0acc5d49a4fc406f0fe3e05
+  position: {x: -668.0001, y: 143.50002}
+  blackboard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -4019489542790474348}
+  - {fileID: 5933885470547171032}
+--- !u!114 &3487981978538351172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66e7d9820ae04144a92aeb787a315af, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 8840db8832bcb8548966385758d586f9
+  position: {x: 12.999999, y: -263.8025}
+  blackboard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 2666654291175043400}
+  - {fileID: -2682819679154193704}
 --- !u!114 &4777543080613231924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,8 +359,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: bb9dd1e96307a3f4193330f15042d762
-  position: {x: 308.99994, y: 486.35004}
+  position: {x: -173.00012, y: 546.06366}
   blackboard: {fileID: 0}
   description: 
   message: 3333333
@@ -256,11 +379,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: f7c2e966d8566724491bd0e63026af4f
-  position: {x: 155.99994, y: 486.35004}
+  position: {x: -326.00012, y: 546.06366}
   blackboard: {fileID: 0}
   description: 
   duration: 2
+--- !u!114 &5933885470547171032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9570a2e82dd858f4097cad42b6607fe4, type: 3}
+  m_Name: FailureNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 01dae8e02b09b0e478a451a7d6d5d8d3
+  position: {x: -570.5175, y: 284.49997}
+  blackboard: {fileID: 0}
+  description: 
 --- !u!114 &6427539838662176883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,8 +418,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: 48207b3885846e34ea7dba3c4a47147c
-  position: {x: 361.6, y: 324.00003}
+  position: {x: -100.65014, y: 306.49902}
   blackboard: {fileID: 0}
   description: 
   message: awefezf
@@ -294,8 +438,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: ec8134387a2a0f341818fb3ab706e445
-  position: {x: 306, y: 171}
+  position: {x: -156.65016, y: 153.49902}
   blackboard: {fileID: 0}
   description: 
   children:
@@ -316,8 +461,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
+  finished: 0
   guid: cdc328f0d1815164289c218dd86b8b99
-  position: {x: 12.9999695, y: 300.00003}
+  position: {x: -496.00003, y: 396.41748}
   blackboard: {fileID: 0}
   description: 
   children:
