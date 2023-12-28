@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-54314699897943042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de36f9f9ca17c845be83584b9501009, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 185f55ffc3cfabf4fb4469859bcd97a8
+  position: {x: 0, y: 4}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: 7334848336328972066}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc72b5ffb2bc0e44b8d42869f4859488, type: 3}
+  m_Name: BT_Zebra
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -54314699897943042}
+  treeState: 0
+  nodes:
+  - {fileID: -54314699897943042}
+  - {fileID: 7334848336328972066}
+  blackboard: {fileID: 0}
+--- !u!114 &7334848336328972066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3a5fea9119c62448c886dc0385f87b, type: 3}
+  m_Name: MoveToTarget
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 26510093f7074ac49aa3200ed7cd0754
+  position: {x: 0, y: 229.96}
+  blackboard: {fileID: 0}
+  description: 

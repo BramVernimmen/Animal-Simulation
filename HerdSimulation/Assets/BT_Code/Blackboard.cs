@@ -5,11 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class Blackboard : MonoBehaviour
 {
-    public Vector3 moveToPos;
-    public GameObject moveToObject;
+    public GameObject animal;
+    public BaseAnimalStats stats;
+    public Vector3 targetPostion;
 
     public virtual string GetInfo()
     {
-        return $"Move to pos: x: {moveToPos.x}, y: {moveToPos.y}, z: {moveToPos.z}";
+        return $"targetPosition: {targetPostion} \n";
     }
 }

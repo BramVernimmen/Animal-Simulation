@@ -10,6 +10,9 @@ public class BaseAnimalStats : MonoBehaviour
     public float _hungerTick;
     public float _thirst;
     public float _thirstTick;
+    public float _maxSpeed;
+    public float _minSpeed;
+    public float _currentSpeed;
 
     void Start()
     {
