@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class SequencerNode : CompositeNode
 {
-    int current;
     protected override void OnStart()
     {
-        current = 0;
         foreach (Node node in children)
         {
             node.finished = false;
@@ -24,18 +22,19 @@ public class SequencerNode : CompositeNode
 
     protected override State OnUpdate()
     {
-        var child = children[current];
-        switch (child.Update())
-        {
-            case State.Running:
-                return State.Running;
-            case State.Failure:
-                return State.Failure;
-            case State.Success:
-                current++;
-                break;
+        foreach (Node child in children) 
+        { 
+            switch (child.Update())
+            {
+                case State.Running:
+                    return State.Running;
+                case State.Failure:
+                    return State.Failure;
+                case State.Success:
+                    break;
+            }
         }
 
-        return current == children.Count ? State.Success : State.Running;
+        return State.Success;
     }
 }

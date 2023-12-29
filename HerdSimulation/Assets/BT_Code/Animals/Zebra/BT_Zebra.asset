@@ -1,5 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7126194554121147389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66e7d9820ae04144a92aeb787a315af, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 1f12d684fb7f6d040b7dad17088b36f6
+  position: {x: 293.07178, y: 329.52942}
+  blackboard: {fileID: 0}
+  description: If we are dead, no need to continue the tree.
+  children:
+  - {fileID: 3270311101847899755}
+  - {fileID: 6067911545878737930}
+--- !u!114 &-1070542739036636390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb7d95959b4223479bd4c8a4e045c3e, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 394f0933c359a53408fb2c9c06baf149
+  position: {x: 228.00006, y: 750}
+  blackboard: {fileID: 0}
+  description: 
+  duration: 5
 --- !u!114 &-54314699897943042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,10 +58,10 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 185f55ffc3cfabf4fb4469859bcd97a8
-  position: {x: 0, y: 4}
+  position: {x: 293.07178, y: 163.52942}
   blackboard: {fileID: 0}
   description: 
-  child: {fileID: 7334848336328972066}
+  child: {fileID: -7126194554121147389}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,7 +79,52 @@ MonoBehaviour:
   nodes:
   - {fileID: -54314699897943042}
   - {fileID: 7334848336328972066}
+  - {fileID: -7126194554121147389}
+  - {fileID: 3270311101847899755}
+  - {fileID: 6067911545878737930}
+  - {fileID: -1070542739036636390}
   blackboard: {fileID: 0}
+--- !u!114 &3270311101847899755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8c98aa4c2171e429d82726a8327a36, type: 3}
+  m_Name: IsAlive
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: ff99cef3d4bc9ff4abad14c00b36640b
+  position: {x: 153, y: 534}
+  blackboard: {fileID: 0}
+  description: 
+--- !u!114 &6067911545878737930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1702572d43b85c3408680fa55bf43b1d, type: 3}
+  m_Name: PartialSequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: a898971b11023a047b8b4700d64814ed
+  position: {x: 451, y: 520}
+  blackboard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 7334848336328972066}
+  - {fileID: -1070542739036636390}
 --- !u!114 &7334848336328972066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +141,6 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 26510093f7074ac49aa3200ed7cd0754
-  position: {x: 0, y: 229.96}
+  position: {x: 471, y: 750}
   blackboard: {fileID: 0}
   description: 

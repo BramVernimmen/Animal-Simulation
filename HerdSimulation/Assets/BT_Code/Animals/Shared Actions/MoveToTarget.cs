@@ -14,14 +14,14 @@ public class MoveToTarget : ActionNode
 
     protected override State OnUpdate()
     {
-        Vector3 currentPosition = blackboard.animal.gameObject.transform.position;
+        Vector3 currentPosition = blackboard.animal.transform.position;
         if (Vector3.Distance(currentPosition, blackboard.targetPostion) < float.Epsilon) 
         {
             return State.Success;   
         }
 
         var step = blackboard.stats._currentSpeed * Time.deltaTime;
-        blackboard.animal.gameObject.transform.position = Vector3.MoveTowards(currentPosition, blackboard.targetPostion, step);
+        blackboard.animal.transform.position = Vector3.MoveTowards(currentPosition, blackboard.targetPostion, step);
 
 
         return State.Running;

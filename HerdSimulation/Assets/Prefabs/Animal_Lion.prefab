@@ -158,8 +158,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _hunger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _thirst
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _maxSpeed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _minSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
       propertyPath: _hungerTick
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _currentSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _healStrength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _starveStrenght
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _starveStrength
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
