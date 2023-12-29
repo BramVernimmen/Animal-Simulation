@@ -1,25 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8643713630016342740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
-  m_Name: NotNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  finished: 0
-  guid: 5402dede6b44659438c30a53b822c068
-  position: {x: 923, y: 123}
-  blackboard: {fileID: 0}
-  description: 
-  child: {fileID: 8669076679663798484}
 --- !u!114 &-8591661645121964464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,12 +36,12 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 1f12d684fb7f6d040b7dad17088b36f6
-  position: {x: 440, y: -284.3551}
+  position: {x: 598, y: -300}
   blackboard: {fileID: 0}
   description: If we are dead, no need to continue the tree.
   children:
   - {fileID: 3270311101847899755}
-  - {fileID: 7724103291342584328}
+  - {fileID: 5847397463850491619}
 --- !u!114 &-1905225015531328279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +58,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 4985643b354033f468bb8c22fc64e425
-  position: {x: 638.38727, y: -69.00003}
+  position: {x: 615.5175, y: -69}
   blackboard: {fileID: 0}
   description: IF THIRSTY MOVE TARGET TO CLOSEST WATER
   message: 
@@ -98,7 +78,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 185f55ffc3cfabf4fb4469859bcd97a8
-  position: {x: 440.0278, y: -439}
+  position: {x: 598, y: -449.36}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: -7126194554121147389}
@@ -122,11 +102,10 @@ MonoBehaviour:
   - {fileID: -7126194554121147389}
   - {fileID: 3270311101847899755}
   - {fileID: 8669076679663798484}
-  - {fileID: -8643713630016342740}
-  - {fileID: 7724103291342584328}
   - {fileID: 5614348120106041441}
   - {fileID: -8591661645121964464}
   - {fileID: -1905225015531328279}
+  - {fileID: 5847397463850491619}
   blackboard: {fileID: 0}
 --- !u!114 &3270311101847899755
 MonoBehaviour:
@@ -163,10 +142,32 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: df3e71cf3a267b04f86256375088de31
-  position: {x: 1423.839, y: -84}
+  position: {x: 1071.35, y: 255.12206}
   blackboard: {fileID: 0}
   description: MOVE TOWARDS THE CENTER OF THE HERD
   message: 
+--- !u!114 &5847397463850491619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d41ebbfece92449aaac6f96fee7e46, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 0866899aa64a25a42a768ee558b306ca
+  position: {x: 1052.4938, y: -70.9397}
+  blackboard: {fileID: 0}
+  description: Move the herd towards the target
+  children:
+  - {fileID: 8669076679663798484}
+  - {fileID: 7334848336328972066}
 --- !u!114 &7334848336328972066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,31 +184,9 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 26510093f7074ac49aa3200ed7cd0754
-  position: {x: 1200, y: 123}
+  position: {x: 1210.0002, y: 115.75}
   blackboard: {fileID: 0}
   description: 
---- !u!114 &7724103291342584328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a66e7d9820ae04144a92aeb787a315af, type: 3}
-  m_Name: SequencerNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  finished: 0
-  guid: 3dd27ebaf92e4be47b05cad42c9256a6
-  position: {x: 1041.839, y: -84}
-  blackboard: {fileID: 0}
-  description: Move the herd towards the target
-  children:
-  - {fileID: -8643713630016342740}
-  - {fileID: 7334848336328972066}
 --- !u!114 &8669076679663798484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +203,6 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: b38f79bcd02005249b197e9b148d1d1e
-  position: {x: 923, y: 244}
+  position: {x: 920.9998, y: 116.00002}
   blackboard: {fileID: 0}
   description: 
