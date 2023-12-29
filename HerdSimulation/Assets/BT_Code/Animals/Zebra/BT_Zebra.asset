@@ -16,10 +16,10 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 65448a09353993b478c10011372df00e
-  position: {x: 1469, y: 116}
+  position: {x: 2353.7075, y: 244.00009}
   blackboard: {fileID: 0}
   description: 
---- !u!114 &-8591661645121964464
+--- !u!114 &-8308622506841959720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28,17 +28,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5af68ac66df9da40b9acb6d712aebd8, type: 3}
-  m_Name: DebugLogNode
+  m_Script: {fileID: 11500000, guid: c9d41ebbfece92449aaac6f96fee7e46, type: 3}
+  m_Name: SelectorNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
   finished: 0
-  guid: 5cb148a3f715b8646a9f97e37dcc42fa
-  position: {x: 370, y: -69}
+  guid: 8bec5f6ac7632e649a70a255b0f88f72
+  position: {x: 1558.749, y: 495.841}
   blackboard: {fileID: 0}
-  description: IF HUNGRY MOVE TARGET TO CLOSEST GRASS
-  message: 
+  description: Handles thirst
+  children:
+  - {fileID: 7642203562680074509}
+  - {fileID: -364151513789697219}
+  - {fileID: -339863190701927422}
 --- !u!114 &-7126194554121147389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,14 +58,14 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 1f12d684fb7f6d040b7dad17088b36f6
-  position: {x: 598, y: -300}
+  position: {x: 1032.4529, y: -449.64484}
   blackboard: {fileID: 0}
   description: If we are dead, no need to continue the tree.
   children:
   - {fileID: 3270311101847899755}
+  - {fileID: 2859121464427361582}
   - {fileID: 5847397463850491619}
-  - {fileID: 6584944266295814740}
---- !u!114 &-4198282501388666528
+--- !u!114 &-6109576055047359904
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,17 +74,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36c906a7d19a9f43a8d50b2065a407a, type: 3}
-  m_Name: MoveToCenterOfHerd
+  m_Script: {fileID: 11500000, guid: a66e7d9820ae04144a92aeb787a315af, type: 3}
+  m_Name: SequencerNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
   finished: 0
-  guid: f0fe4dbf6d6d5b94092c464d85bfc578
-  position: {x: 1781, y: 116}
+  guid: b1c88b46597c70e4d8322e4d7c2379db
+  position: {x: 1092.749, y: 301.841}
   blackboard: {fileID: 0}
   description: 
---- !u!114 &-1905225015531328279
+  children:
+  - {fileID: 1839120160800690554}
+  - {fileID: -8308622506841959720}
+--- !u!114 &-5522658999644863549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,17 +96,94 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5af68ac66df9da40b9acb6d712aebd8, type: 3}
-  m_Name: DebugLogNode
+  m_Script: {fileID: 11500000, guid: 1788d1d21efd88e4182be899a0f85523, type: 3}
+  m_Name: ShouldAnimalDrink
   m_EditorClassIdentifier: 
   state: 0
   started: 0
   finished: 0
-  guid: 4985643b354033f468bb8c22fc64e425
-  position: {x: 615.5175, y: -69}
+  guid: bab51fdd0b67ae6459acbdadf55fdae8
+  position: {x: 1708.7489, y: 834.84094}
   blackboard: {fileID: 0}
-  description: IF THIRSTY MOVE TARGET TO CLOSEST WATER
-  message: 
+  description: 
+--- !u!114 &-5228516871818030753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
+  m_Name: NotNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 4927c840b0fef42438e914276c0401f3
+  position: {x: 731.749, y: 684.84094}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: -45580133774683601}
+--- !u!114 &-2190108291923958443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58836f5ecc73c8e44b460fcab80507d1, type: 3}
+  m_Name: SetCenterOfHerdAsTarget
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 4fb638832fbb251499378b09fc1bc13d
+  position: {x: 2600.7075, y: 241.00009}
+  blackboard: {fileID: 0}
+  description: 
+--- !u!114 &-364151513789697219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
+  m_Name: NotNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: d9bcaf57600c2874096a5eebb5db91f7
+  position: {x: 1708.7489, y: 671.84094}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: -5522658999644863549}
+--- !u!114 &-339863190701927422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d5176fdb6f0cf4ca18faaaf208eced, type: 3}
+  m_Name: SetTargetToClosestWater
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 76e955f8ad03dd441b615d1b6876da6a
+  position: {x: 1947.7489, y: 684.84094}
+  blackboard: {fileID: 0}
+  description: 
 --- !u!114 &-54314699897943042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,10 +200,29 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 185f55ffc3cfabf4fb4469859bcd97a8
-  position: {x: 598, y: -449.36}
+  position: {x: 1032.4529, y: -598.64484}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: -7126194554121147389}
+--- !u!114 &-45580133774683601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59108e27a9a36b43aac247c1750bb43, type: 3}
+  m_Name: ShouldAnimalEat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: a6a7e5799f03b8d43b966db6c90691f7
+  position: {x: 731.749, y: 847.84094}
+  blackboard: {fileID: 0}
+  description: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,14 +242,130 @@ MonoBehaviour:
   - {fileID: 7334848336328972066}
   - {fileID: -7126194554121147389}
   - {fileID: 3270311101847899755}
-  - {fileID: 8669076679663798484}
-  - {fileID: -8591661645121964464}
-  - {fileID: -1905225015531328279}
   - {fileID: 5847397463850491619}
   - {fileID: 6584944266295814740}
   - {fileID: -9183882663977896613}
-  - {fileID: -4198282501388666528}
+  - {fileID: 1839120160800690554}
+  - {fileID: -8308622506841959720}
+  - {fileID: -45580133774683601}
+  - {fileID: -5522658999644863549}
+  - {fileID: 3844052164895048921}
+  - {fileID: 7311481799798871802}
+  - {fileID: 3251566598446683462}
+  - {fileID: -5228516871818030753}
+  - {fileID: 7642203562680074509}
+  - {fileID: -364151513789697219}
+  - {fileID: 2142134105501262616}
+  - {fileID: -339863190701927422}
+  - {fileID: -2190108291923958443}
+  - {fileID: -6109576055047359904}
+  - {fileID: 2859121464427361582}
+  - {fileID: 949156468439346580}
   blackboard: {fileID: 0}
+--- !u!114 &949156468439346580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
+  m_Name: NotNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 5d049a2292cbfe146b09b940a4dc0c32
+  position: {x: 1093, y: 71.99999}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: -6109576055047359904}
+--- !u!114 &1839120160800690554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d41ebbfece92449aaac6f96fee7e46, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: b7ddc4c96a9da734aa9d27ecc5f9dfc7
+  position: {x: 656.749, y: 495.841}
+  blackboard: {fileID: 0}
+  description: Handles hunger\
+  children:
+  - {fileID: 3251566598446683462}
+  - {fileID: -5228516871818030753}
+  - {fileID: 2142134105501262616}
+--- !u!114 &2142134105501262616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b45d62f17ca8a04da9de27b32c473ce, type: 3}
+  m_Name: SetTargetToClosestGrass
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 2a0f07687aa5f224b966984cc027ccbe
+  position: {x: 997.74896, y: 684.84094}
+  blackboard: {fileID: 0}
+  description: 
+--- !u!114 &2859121464427361582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d41ebbfece92449aaac6f96fee7e46, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 8b08e8d6c335b2c41bfccf5b9551f8a9
+  position: {x: 1688.5422, y: -115.500015}
+  blackboard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 949156468439346580}
+  - {fileID: 6584944266295814740}
+--- !u!114 &3251566598446683462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
+  m_Name: NotNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 3174ff6ed3601c34abed2cd42d9a92b1
+  position: {x: 466.749, y: 684.84094}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: 3844052164895048921}
 --- !u!114 &3270311101847899755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +385,25 @@ MonoBehaviour:
   position: {x: 153.32686, y: -68.999985}
   blackboard: {fileID: 0}
   description: 
+--- !u!114 &3844052164895048921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf593f019b1dc04bbb9ad103eb6e21a, type: 3}
+  m_Name: IsAnimalHungry
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 29147594cbedfe245a2e5a42b45b6e01
+  position: {x: 466.749, y: 847.84094}
+  blackboard: {fileID: 0}
+  description: 
 --- !u!114 &5847397463850491619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,11 +420,10 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 0866899aa64a25a42a768ee558b306ca
-  position: {x: 1052.4938, y: -70.9397}
+  position: {x: 2988, y: -69}
   blackboard: {fileID: 0}
   description: Move the herd towards the target
   children:
-  - {fileID: 8669076679663798484}
   - {fileID: 7334848336328972066}
 --- !u!114 &6584944266295814740
 MonoBehaviour:
@@ -205,12 +441,31 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 1f61e9f31c5f66f46b91d09d2d8e8ab1
-  position: {x: 1649, y: -71}
+  position: {x: 2503.7075, y: 57.000053}
   blackboard: {fileID: 0}
   description: Move to center of the herd if too far
   children:
   - {fileID: -9183882663977896613}
-  - {fileID: -4198282501388666528}
+  - {fileID: -2190108291923958443}
+--- !u!114 &7311481799798871802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7670b600e62ccb54480c19fc6b2ca31d, type: 3}
+  m_Name: IsAnimalThirsty
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: e56a8fd581886cf458d102fb1664938b
+  position: {x: 1430.7489, y: 834.84094}
+  blackboard: {fileID: 0}
+  description: 
 --- !u!114 &7334848336328972066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,10 +482,10 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 26510093f7074ac49aa3200ed7cd0754
-  position: {x: 1210, y: 116}
+  position: {x: 2996, y: 96}
   blackboard: {fileID: 0}
   description: 
---- !u!114 &8669076679663798484
+--- !u!114 &7642203562680074509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,13 +494,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67b35286813bfa14e8db5f8ec8a315a2, type: 3}
-  m_Name: HasHerdArrived
+  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
+  m_Name: NotNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
   finished: 0
-  guid: b38f79bcd02005249b197e9b148d1d1e
-  position: {x: 921, y: 116}
+  guid: 9811b9b851bbbef4aabc2c161506fd3a
+  position: {x: 1430.7489, y: 671.84094}
   blackboard: {fileID: 0}
   description: 
+  child: {fileID: 7311481799798871802}

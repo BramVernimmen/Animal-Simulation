@@ -16,20 +16,7 @@ public class HasHerdArrived : ActionNode
 
     protected override State OnUpdate()
     {
-        Vector3 totalPosition = new Vector3();
-
-        foreach (GameObject zebra in zebraBlackboard.herd._zebraList)
-        {
-            // if one has arrived, the others should have too
-            // otherwise they are not close enough and need to move closer either way
-            BB_Zebra bb = zebra.GetComponent<BB_Zebra>();
-            totalPosition += zebra.transform.position;
-        }
-
-        totalPosition /= zebraBlackboard.herd._zebraList.Count;
-        totalPosition.y = 0.0f;
-
-        if (Vector3.Distance(totalPosition, zebraBlackboard.targetPostion) <= 2.0f)
+        if (Vector3.Distance(zebraBlackboard.herd.GetHerdCenter(), zebraBlackboard.targetPostion) <= 2.0f)
         {
             return State.Success;
         }

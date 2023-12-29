@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class MoveToTarget : ActionNode
@@ -22,7 +23,7 @@ public class MoveToTarget : ActionNode
 
         var step = blackboard.stats._currentSpeed * Time.deltaTime;
         blackboard.animal.transform.position = Vector3.MoveTowards(currentPosition, blackboard.targetPostion, step);
-
+        blackboard.animal.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
         return State.Running;
     }

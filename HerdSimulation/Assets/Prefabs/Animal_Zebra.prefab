@@ -178,8 +178,16 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _hungerTick
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _thirstTick
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
       propertyPath: _currentSpeed
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
       propertyPath: _deadMaterial
@@ -187,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7b4fd9ef01f4cd846a8d9449a6d58f9d, type: 2}
     - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
       propertyPath: _healStrength
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
       propertyPath: _starveStrenght
@@ -195,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
       propertyPath: _starveStrength
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

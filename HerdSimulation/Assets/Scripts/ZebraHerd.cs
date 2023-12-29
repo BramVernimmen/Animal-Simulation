@@ -8,7 +8,6 @@ public class ZebraHerd : MonoBehaviour
     public GameObject zebraPrefab;
     public int _amountToSpawn;
     public List<GameObject> _zebraList = new List<GameObject>();
-    public Vector3 _herdCenter = Vector3.zero;
     private List<GameObject> _grassFields = new List<GameObject>();
     private List<GameObject> _waterSpots = new List<GameObject>();
 
@@ -43,6 +42,30 @@ public class ZebraHerd : MonoBehaviour
 
     void Update()
     {
-        
+        // very dirty for now
+        foreach (GameObject zebra in  _zebraList) 
+        { 
+            if (zebra.GetComponent<BaseAnimalStats>()._currentHealth <= 0)
+            {
+                _zebraList.Remove(zebra);
+                return;
+            }
+        }
+    }
+
+    public Vector3 GetHerdCenter()
+    {
+        Vector3 center = Vector3.zero;
+
+        foreach (GameObject zebra in _zebraList)
+        {
+            BB_Zebra bb = zebra.GetComponent<BB_Zebra>();
+            center += zebra.transform.position;
+        }
+
+        center /= _zebraList.Count;
+        center.y = 0.0f;
+
+        return center;
     }
 }

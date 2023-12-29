@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IsCloseToHerdCenter : ActionNode
+public class SetCenterOfHerdAsTarget : ActionNode
 {
     BB_Zebra zebraBlackboard;
     protected override void OnStart()
@@ -16,11 +16,10 @@ public class IsCloseToHerdCenter : ActionNode
 
     protected override State OnUpdate()
     {
-        if (Vector3.Distance(zebraBlackboard.animal.transform.position, zebraBlackboard.herd.GetHerdCenter()) <= zebraBlackboard.herd._zebraList.Count / 2)
-        {
-            return State.Success;
-        }
+        Vector3 herdCenter = zebraBlackboard.herd.GetHerdCenter();
 
-        return State.Failure;
+        zebraBlackboard.targetPostion = herdCenter;
+
+        return State.Success;
     }
 }
