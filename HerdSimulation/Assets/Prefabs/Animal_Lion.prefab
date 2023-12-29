@@ -158,6 +158,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _body
+      value: 
+      objectReference: {fileID: 1693738192540513152}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
       propertyPath: _hunger
       value: 0
       objectReference: {fileID: 0}
@@ -181,6 +185,10 @@ PrefabInstance:
       propertyPath: _currentSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      propertyPath: _deadMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b4fd9ef01f4cd846a8d9449a6d58f9d, type: 2}
     - target: {fileID: 8966675876446306806, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
       propertyPath: _healStrength
       value: 2

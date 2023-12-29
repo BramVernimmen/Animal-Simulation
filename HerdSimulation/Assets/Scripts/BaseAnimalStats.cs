@@ -19,6 +19,9 @@ public class BaseAnimalStats : MonoBehaviour
     public bool _isHungry;
     public bool _isThirsty;
 
+    public Material _deadMaterial;
+    public GameObject _body;
+
     void Start()
     {
         _currentHealth = _maxHealth;
@@ -59,6 +62,11 @@ public class BaseAnimalStats : MonoBehaviour
         if (_currentHealth < _maxHealth && !_isHungry && !_isThirsty && _currentHealth > 0.0f)
         {
             _currentHealth += _healStrength * Time.deltaTime;
+        }
+        else if (_currentHealth <= 0.0f)
+        {
+            _body.GetComponent<MeshRenderer>().material = _deadMaterial;
+            enabled = false;
         }
     }
 }

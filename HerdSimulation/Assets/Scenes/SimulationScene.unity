@@ -932,7 +932,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zebraPrefab: {fileID: 5795110225746031907, guid: 3f4ee35c30c676d4385720c525d7b775, type: 3}
-  _amountToSpawn: 5
+  _amountToSpawn: 20
+  _zebraList: []
+  _herdCenter: {x: 0, y: 0, z: 0}
 --- !u!4 &1014141656
 Transform:
   m_ObjectHideFlags: 0

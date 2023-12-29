@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HasHerdArrived : ActionNode
+public class IsCloseToHerdCenter : ActionNode
 {
     BB_Zebra zebraBlackboard;
     protected override void OnStart()
@@ -20,8 +20,6 @@ public class HasHerdArrived : ActionNode
 
         foreach (GameObject zebra in zebraBlackboard.herd._zebraList)
         {
-            // if one has arrived, the others should have too
-            // otherwise they are not close enough and need to move closer either way
             BB_Zebra bb = zebra.GetComponent<BB_Zebra>();
             totalPosition += zebra.transform.position;
         }
@@ -29,7 +27,9 @@ public class HasHerdArrived : ActionNode
         totalPosition /= zebraBlackboard.herd._zebraList.Count;
         totalPosition.y = 0.0f;
 
-        if (Vector3.Distance(totalPosition, zebraBlackboard.targetPostion) <= 2.0f)
+        zebraBlackboard.herd._herdCenter = totalPosition;
+
+        if (Vector3.Distance(zebraBlackboard.animal.transform.position, totalPosition) <= 2.0f)
         {
             return State.Success;
         }

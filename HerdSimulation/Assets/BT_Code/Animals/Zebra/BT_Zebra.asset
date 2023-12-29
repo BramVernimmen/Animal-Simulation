@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9183882663977896613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144d04e63ed88b945b0109a14e666a62, type: 3}
+  m_Name: IsCloseToHerdCenter
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 65448a09353993b478c10011372df00e
+  position: {x: 1469, y: 116}
+  blackboard: {fileID: 0}
+  description: 
 --- !u!114 &-8591661645121964464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,6 +61,26 @@ MonoBehaviour:
   children:
   - {fileID: 3270311101847899755}
   - {fileID: 5847397463850491619}
+  - {fileID: 6584944266295814740}
+--- !u!114 &-4198282501388666528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36c906a7d19a9f43a8d50b2065a407a, type: 3}
+  m_Name: MoveToCenterOfHerd
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: f0fe4dbf6d6d5b94092c464d85bfc578
+  position: {x: 1781, y: 116}
+  blackboard: {fileID: 0}
+  description: 
 --- !u!114 &-1905225015531328279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,10 +141,12 @@ MonoBehaviour:
   - {fileID: -7126194554121147389}
   - {fileID: 3270311101847899755}
   - {fileID: 8669076679663798484}
-  - {fileID: 5614348120106041441}
   - {fileID: -8591661645121964464}
   - {fileID: -1905225015531328279}
   - {fileID: 5847397463850491619}
+  - {fileID: 6584944266295814740}
+  - {fileID: -9183882663977896613}
+  - {fileID: -4198282501388666528}
   blackboard: {fileID: 0}
 --- !u!114 &3270311101847899755
 MonoBehaviour:
@@ -126,26 +167,6 @@ MonoBehaviour:
   position: {x: 153.32686, y: -68.999985}
   blackboard: {fileID: 0}
   description: 
---- !u!114 &5614348120106041441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5af68ac66df9da40b9acb6d712aebd8, type: 3}
-  m_Name: DebugLogNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  finished: 0
-  guid: df3e71cf3a267b04f86256375088de31
-  position: {x: 1071.35, y: 255.12206}
-  blackboard: {fileID: 0}
-  description: MOVE TOWARDS THE CENTER OF THE HERD
-  message: 
 --- !u!114 &5847397463850491619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +189,28 @@ MonoBehaviour:
   children:
   - {fileID: 8669076679663798484}
   - {fileID: 7334848336328972066}
+--- !u!114 &6584944266295814740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d41ebbfece92449aaac6f96fee7e46, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 1f61e9f31c5f66f46b91d09d2d8e8ab1
+  position: {x: 1649, y: -71}
+  blackboard: {fileID: 0}
+  description: Move to center of the herd if too far
+  children:
+  - {fileID: -9183882663977896613}
+  - {fileID: -4198282501388666528}
 --- !u!114 &7334848336328972066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +227,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 26510093f7074ac49aa3200ed7cd0754
-  position: {x: 1210.0002, y: 115.75}
+  position: {x: 1210, y: 116}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &8669076679663798484
@@ -203,6 +246,6 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: b38f79bcd02005249b197e9b148d1d1e
-  position: {x: 920.9998, y: 116.00002}
+  position: {x: 921, y: 116}
   blackboard: {fileID: 0}
   description: 
