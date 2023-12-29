@@ -23,7 +23,6 @@ public class ZebraHerd : MonoBehaviour
         bb.herd = this;
         bb.targetPostion = transform.position;
 
-
         for(int i = 0;  i < _amountToSpawn; i++) 
         {
             GameObject newZebra = Instantiate(zebraPrefab);

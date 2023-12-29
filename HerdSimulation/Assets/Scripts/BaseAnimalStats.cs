@@ -17,7 +17,9 @@ public class BaseAnimalStats : MonoBehaviour
     public float _healStrength;
 
     public bool _isHungry;
+    public bool _isEating;
     public bool _isThirsty;
+    public bool _isDrinking;
 
     public Material _deadMaterial;
     public GameObject _body;
