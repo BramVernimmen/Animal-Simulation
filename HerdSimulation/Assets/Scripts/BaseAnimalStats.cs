@@ -56,7 +56,7 @@ public class BaseAnimalStats : MonoBehaviour
             _currentHealth -= _starveStrength * Time.deltaTime;
         }
 
-        if (_currentHealth < _maxHealth && !_isHungry && !_isThirsty)
+        if (_currentHealth < _maxHealth && !_isHungry && !_isThirsty && _currentHealth > 0.0f)
         {
             _currentHealth += _healStrength * Time.deltaTime;
         }

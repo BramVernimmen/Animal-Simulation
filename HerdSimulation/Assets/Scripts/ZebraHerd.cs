@@ -7,7 +7,7 @@ public class ZebraHerd : MonoBehaviour
 {
     public GameObject zebraPrefab;
     public int _amountToSpawn;
-    private List<GameObject> _zebraList = new List<GameObject>();
+    public List<GameObject> _zebraList = new List<GameObject>();
     private List<GameObject> _grassFields = new List<GameObject>();
     private List<GameObject> _waterSpots = new List<GameObject>();
 
@@ -19,6 +19,8 @@ public class ZebraHerd : MonoBehaviour
         var bb = zebraPrefab.GetComponent<BB_Zebra>();
         bb.grassFields = _grassFields;
         bb.waterSpots = _waterSpots;
+        bb.herd = this;
+        bb.targetPostion = transform.position;
 
         for(int i = 0;  i < _amountToSpawn; i++) 
         {

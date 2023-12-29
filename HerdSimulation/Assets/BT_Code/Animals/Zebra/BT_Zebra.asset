@@ -1,5 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8643713630016342740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
+  m_Name: NotNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 5402dede6b44659438c30a53b822c068
+  position: {x: 923, y: 123}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: 8669076679663798484}
+--- !u!114 &-8591661645121964464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5af68ac66df9da40b9acb6d712aebd8, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 5cb148a3f715b8646a9f97e37dcc42fa
+  position: {x: 370, y: -69}
+  blackboard: {fileID: 0}
+  description: IF HUNGRY MOVE TARGET TO CLOSEST GRASS
+  message: 
 --- !u!114 &-7126194554121147389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,13 +56,13 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 1f12d684fb7f6d040b7dad17088b36f6
-  position: {x: 293.07178, y: 329.52942}
+  position: {x: 440, y: -284.3551}
   blackboard: {fileID: 0}
   description: If we are dead, no need to continue the tree.
   children:
   - {fileID: 3270311101847899755}
-  - {fileID: 6067911545878737930}
---- !u!114 &-1070542739036636390
+  - {fileID: 7724103291342584328}
+--- !u!114 &-1905225015531328279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31,17 +71,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eb7d95959b4223479bd4c8a4e045c3e, type: 3}
-  m_Name: WaitNode
+  m_Script: {fileID: 11500000, guid: c5af68ac66df9da40b9acb6d712aebd8, type: 3}
+  m_Name: DebugLogNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
   finished: 0
-  guid: 394f0933c359a53408fb2c9c06baf149
-  position: {x: 228.00006, y: 750}
+  guid: 4985643b354033f468bb8c22fc64e425
+  position: {x: 638.38727, y: -69.00003}
   blackboard: {fileID: 0}
-  description: 
-  duration: 5
+  description: IF THIRSTY MOVE TARGET TO CLOSEST WATER
+  message: 
 --- !u!114 &-54314699897943042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +98,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 185f55ffc3cfabf4fb4469859bcd97a8
-  position: {x: 293.07178, y: 163.52942}
+  position: {x: 440.0278, y: -439}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: -7126194554121147389}
@@ -81,8 +121,12 @@ MonoBehaviour:
   - {fileID: 7334848336328972066}
   - {fileID: -7126194554121147389}
   - {fileID: 3270311101847899755}
-  - {fileID: 6067911545878737930}
-  - {fileID: -1070542739036636390}
+  - {fileID: 8669076679663798484}
+  - {fileID: -8643713630016342740}
+  - {fileID: 7724103291342584328}
+  - {fileID: 5614348120106041441}
+  - {fileID: -8591661645121964464}
+  - {fileID: -1905225015531328279}
   blackboard: {fileID: 0}
 --- !u!114 &3270311101847899755
 MonoBehaviour:
@@ -100,10 +144,10 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: ff99cef3d4bc9ff4abad14c00b36640b
-  position: {x: 153, y: 534}
+  position: {x: 153.32686, y: -68.999985}
   blackboard: {fileID: 0}
   description: 
---- !u!114 &6067911545878737930
+--- !u!114 &5614348120106041441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,19 +156,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1702572d43b85c3408680fa55bf43b1d, type: 3}
-  m_Name: PartialSequencerNode
+  m_Script: {fileID: 11500000, guid: c5af68ac66df9da40b9acb6d712aebd8, type: 3}
+  m_Name: DebugLogNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
   finished: 0
-  guid: a898971b11023a047b8b4700d64814ed
-  position: {x: 451, y: 520}
+  guid: df3e71cf3a267b04f86256375088de31
+  position: {x: 1423.839, y: -84}
   blackboard: {fileID: 0}
-  description: 
-  children:
-  - {fileID: 7334848336328972066}
-  - {fileID: -1070542739036636390}
+  description: MOVE TOWARDS THE CENTER OF THE HERD
+  message: 
 --- !u!114 &7334848336328972066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +183,47 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 26510093f7074ac49aa3200ed7cd0754
-  position: {x: 471, y: 750}
+  position: {x: 1200, y: 123}
+  blackboard: {fileID: 0}
+  description: 
+--- !u!114 &7724103291342584328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66e7d9820ae04144a92aeb787a315af, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 3dd27ebaf92e4be47b05cad42c9256a6
+  position: {x: 1041.839, y: -84}
+  blackboard: {fileID: 0}
+  description: Move the herd towards the target
+  children:
+  - {fileID: -8643713630016342740}
+  - {fileID: 7334848336328972066}
+--- !u!114 &8669076679663798484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b35286813bfa14e8db5f8ec8a315a2, type: 3}
+  m_Name: HasHerdArrived
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: b38f79bcd02005249b197e9b148d1d1e
+  position: {x: 923, y: 244}
   blackboard: {fileID: 0}
   description: 
