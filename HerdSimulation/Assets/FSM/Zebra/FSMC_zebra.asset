@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ece13e57ab2a54e80667f7d20c2544, type: 3}
+  m_Name: FSMC_zebra
+  m_EditorClassIdentifier: 
+  StartPosition: {x: 200, y: 178}
+  AnyPosition: {x: 247, y: 502}
+  States:
+  - rid: 7632661984103104519
+  - rid: 7632661984103104522
+  - rid: 7632661984103104523
+  - rid: 7632661984103104538
+  AnyTransitions:
+  - rid: 7632661984103104539
+  StartingState:
+    rid: 7632661984103104519
+  Parameters:
+  - rid: 7632661984103104516
+  - rid: 7632661984103104517
+  - rid: 7632661984103104537
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 7632661984103104516
+      type: {class: FSMC_BoolParameter, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _type: 2
+        _name: IsHungry
+        _value: 0
+    - rid: 7632661984103104517
+      type: {class: FSMC_BoolParameter, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _type: 2
+        _name: IsThirsty
+        _value: 0
+    - rid: 7632661984103104519
+      type: {class: FSMC_State, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _behaviours:
+        - rid: 7632661984103104536
+        Position: {x: 810, y: 178}
+        _name: MoveToCenter
+        TransitionsFrom:
+        - rid: 7632661984103104530
+        - rid: 7632661984103104532
+        TransitionsTo:
+        - rid: 7632661984103104526
+        - rid: 7632661984103104528
+    - rid: 7632661984103104522
+      type: {class: FSMC_State, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _behaviours:
+        - rid: 7632661984103104542
+        Position: {x: 528, y: 340}
+        _name: MoveToGrass
+        TransitionsFrom:
+        - rid: 7632661984103104526
+        - rid: 7632661984103104534
+        TransitionsTo:
+        - rid: 7632661984103104530
+    - rid: 7632661984103104523
+      type: {class: FSMC_State, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _behaviours:
+        - rid: 7632661984103104543
+        Position: {x: 1014, y: 340}
+        _name: MoveToWater
+        TransitionsFrom:
+        - rid: 7632661984103104528
+        TransitionsTo:
+        - rid: 7632661984103104532
+        - rid: 7632661984103104534
+    - rid: 7632661984103104526
+      type: {class: FSMC_Transition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        conditions:
+        - conditions:
+          - rid: 7632661984103104527
+        _originState:
+          rid: 7632661984103104522
+        _destinationState:
+          rid: 7632661984103104519
+        _name: MoveToGrass->MoveToCenter
+    - rid: 7632661984103104527
+      type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        comparison: 0
+        parameter:
+          rid: 7632661984103104516
+        Value: 0
+    - rid: 7632661984103104528
+      type: {class: FSMC_Transition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        conditions:
+        - conditions:
+          - rid: 7632661984103104529
+        _originState:
+          rid: 7632661984103104523
+        _destinationState:
+          rid: 7632661984103104519
+        _name: MoveToWater->MoveToCenter
+    - rid: 7632661984103104529
+      type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        comparison: 0
+        parameter:
+          rid: 7632661984103104517
+        Value: 0
+    - rid: 7632661984103104530
+      type: {class: FSMC_Transition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        conditions:
+        - conditions:
+          - rid: 7632661984103104531
+        _originState:
+          rid: 7632661984103104519
+        _destinationState:
+          rid: 7632661984103104522
+        _name: MoveToCenter->MoveToGrass
+    - rid: 7632661984103104531
+      type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        comparison: 0
+        parameter:
+          rid: 7632661984103104516
+        Value: 1
+    - rid: 7632661984103104532
+      type: {class: FSMC_Transition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        conditions:
+        - conditions:
+          - rid: 7632661984103104533
+        _originState:
+          rid: 7632661984103104519
+        _destinationState:
+          rid: 7632661984103104523
+        _name: MoveToCenter->MoveToWater
+    - rid: 7632661984103104533
+      type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        comparison: 0
+        parameter:
+          rid: 7632661984103104517
+        Value: 1
+    - rid: 7632661984103104534
+      type: {class: FSMC_Transition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        conditions:
+        - conditions:
+          - rid: 7632661984103104535
+        _originState:
+          rid: 7632661984103104522
+        _destinationState:
+          rid: 7632661984103104523
+        _name: MoveToGrass->MoveToWater
+    - rid: 7632661984103104535
+      type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        comparison: 0
+        parameter:
+          rid: 7632661984103104517
+        Value: 1
+    - rid: 7632661984103104536
+      type: {class: MoveToCenter, ns: , asm: Assembly-CSharp}
+      data:
+        enabled: 1
+    - rid: 7632661984103104537
+      type: {class: FSMC_BoolParameter, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _type: 2
+        _name: IsDead
+        _value: 0
+    - rid: 7632661984103104538
+      type: {class: FSMC_State, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _behaviours: []
+        Position: {x: 661, y: 502}
+        _name: Dead
+        TransitionsFrom: []
+        TransitionsTo:
+        - rid: 7632661984103104539
+    - rid: 7632661984103104539
+      type: {class: FSMC_Transition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        conditions:
+        - conditions:
+          - rid: 7632661984103104540
+        _originState:
+          rid: -2
+        _destinationState:
+          rid: 7632661984103104538
+        _name: Any->Dead
+    - rid: 7632661984103104540
+      type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        comparison: 0
+        parameter:
+          rid: 7632661984103104537
+        Value: 1
+    - rid: 7632661984103104542
+      type: {class: MoveToClosestGrass, ns: , asm: Assembly-CSharp}
+      data:
+        enabled: 1
+    - rid: 7632661984103104543
+      type: {class: MoveToClosestWater, ns: , asm: Assembly-CSharp}
+      data:
+        enabled: 1
