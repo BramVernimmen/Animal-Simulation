@@ -1,3 +1,4 @@
+using CrashKonijn.Goap.Behaviours;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,8 @@ public class ZebraHerd : MonoBehaviour
 {
     public GameObject zebraPrefab;
     public int _amountToSpawn;
+    public bool _useGOAP;
+    public GoapSetBehaviour _goapSetBehaviour;
     public List<GameObject> _zebraList = new List<GameObject>();
     private List<GameObject> _grassFields = new List<GameObject>();
     private List<GameObject> _waterSpots = new List<GameObject>();
@@ -21,6 +24,8 @@ public class ZebraHerd : MonoBehaviour
         bb.waterSpots = _waterSpots;
         bb.herd = this;
         bb.targetPostion = transform.position;
+        
+        zebraPrefab.GetComponent<AgentBehaviour>().goapSetBehaviour = _goapSetBehaviour;
 
         for(int i = 0;  i < _amountToSpawn; i++) 
         {
@@ -37,6 +42,21 @@ public class ZebraHerd : MonoBehaviour
 
             newZebra.transform.position = basePosition;
             _zebraList.Add(newZebra);
+        }
+
+        if (_useGOAP)
+        {
+            foreach (GameObject zebra in _zebraList) 
+            { 
+                zebra.GetComponent<BehaviourTreeRunner>().enabled = false;
+            }
+        }
+        else
+        {
+            foreach (GameObject zebra in _zebraList)
+            {
+                zebra.GetComponent<AgentBehaviour>().enabled = false;
+            }
         }
     }
 

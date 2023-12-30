@@ -217,6 +217,12 @@ PrefabInstance:
       addedObject: {fileID: 5035159448084113246}
     - targetCorrespondingSourceObject: {fileID: 1990929067233238745, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 5025332962473912831}
+    - targetCorrespondingSourceObject: {fileID: 1990929067233238745, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2198277556129767556}
+    - targetCorrespondingSourceObject: {fileID: 1990929067233238745, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1455660680234999304}
     - targetCorrespondingSourceObject: {fileID: 1990929067233238745, guid: 47d8a2a25b9ab2d40b51a2c74a885a8f, type: 3}
       insertIndex: -1
@@ -257,6 +263,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 6d17df87dbb6cc94eb27058b8575c165, type: 2}
   blackboard: {fileID: 1455660680234999304}
+--- !u!114 &5025332962473912831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795110225746031907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cef53d855ccf0b46bcf004b27c4a52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goapSetBehaviour: {fileID: 0}
+  <DistanceMultiplier>k__BackingField: 1
+--- !u!114 &2198277556129767556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795110225746031907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad9c90b56fab59419c471c5717c6774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1455660680234999304
 MonoBehaviour:
   m_ObjectHideFlags: 0

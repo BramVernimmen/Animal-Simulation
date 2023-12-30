@@ -16,7 +16,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 65448a09353993b478c10011372df00e
-  position: {x: 2353.7075, y: 244.00009}
+  position: {x: 2842, y: 336}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &-8308622506841959720
@@ -35,7 +35,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 8bec5f6ac7632e649a70a255b0f88f72
-  position: {x: 1558.749, y: 495.841}
+  position: {x: 2453, y: 573}
   blackboard: {fileID: 0}
   description: Handles thirst
   children:
@@ -81,7 +81,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: b1c88b46597c70e4d8322e4d7c2379db
-  position: {x: 1092.749, y: 301.841}
+  position: {x: 1987, y: 379}
   blackboard: {fileID: 0}
   description: 
   children:
@@ -103,7 +103,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: bab51fdd0b67ae6459acbdadf55fdae8
-  position: {x: 1708.7489, y: 834.84094}
+  position: {x: 2603, y: 912}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &-5228516871818030753
@@ -122,7 +122,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 4927c840b0fef42438e914276c0401f3
-  position: {x: 731.749, y: 684.84094}
+  position: {x: 1626, y: 762}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: -45580133774683601}
@@ -142,7 +142,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 4fb638832fbb251499378b09fc1bc13d
-  position: {x: 2600.7075, y: 241.00009}
+  position: {x: 3089, y: 333}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &-364151513789697219
@@ -161,7 +161,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: d9bcaf57600c2874096a5eebb5db91f7
-  position: {x: 1708.7489, y: 671.84094}
+  position: {x: 2603, y: 749}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: -5522658999644863549}
@@ -181,7 +181,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 76e955f8ad03dd441b615d1b6876da6a
-  position: {x: 1947.7489, y: 684.84094}
+  position: {x: 2842, y: 762}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &-54314699897943042
@@ -220,7 +220,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: a6a7e5799f03b8d43b966db6c90691f7
-  position: {x: 731.749, y: 847.84094}
+  position: {x: 1626, y: 925}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &11400000
@@ -261,6 +261,8 @@ MonoBehaviour:
   - {fileID: -6109576055047359904}
   - {fileID: 2859121464427361582}
   - {fileID: 949156468439346580}
+  - {fileID: 4947345728116467665}
+  - {fileID: 2651231981390742818}
   blackboard: {fileID: 0}
 --- !u!114 &949156468439346580
 MonoBehaviour:
@@ -278,7 +280,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 5d049a2292cbfe146b09b940a4dc0c32
-  position: {x: 1093, y: 71.99999}
+  position: {x: 1987, y: 149}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: -6109576055047359904}
@@ -298,9 +300,9 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: b7ddc4c96a9da734aa9d27ecc5f9dfc7
-  position: {x: 656.749, y: 495.841}
+  position: {x: 1551, y: 573}
   blackboard: {fileID: 0}
-  description: Handles hunger\
+  description: Handles hunger
   children:
   - {fileID: 3251566598446683462}
   - {fileID: -5228516871818030753}
@@ -321,9 +323,29 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 2a0f07687aa5f224b966984cc027ccbe
-  position: {x: 997.74896, y: 684.84094}
+  position: {x: 1892, y: 762}
   blackboard: {fileID: 0}
   description: 
+--- !u!114 &2651231981390742818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5af68ac66df9da40b9acb6d712aebd8, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: e2580256b2ce6c249b105e35abb97c50
+  position: {x: 1190, y: 149.99997}
+  blackboard: {fileID: 0}
+  description: SET TARGET AWAY FROM ENEMY
+  message: 
 --- !u!114 &2859121464427361582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +362,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 8b08e8d6c335b2c41bfccf5b9551f8a9
-  position: {x: 1688.5422, y: -115.500015}
+  position: {x: 1986.9999, y: -33.00002}
   blackboard: {fileID: 0}
   description: 
   children:
@@ -362,7 +384,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 3174ff6ed3601c34abed2cd42d9a92b1
-  position: {x: 466.749, y: 684.84094}
+  position: {x: 1361, y: 762}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: 3844052164895048921}
@@ -401,9 +423,29 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 29147594cbedfe245a2e5a42b45b6e01
-  position: {x: 466.749, y: 847.84094}
+  position: {x: 1361, y: 925}
   blackboard: {fileID: 0}
   description: 
+--- !u!114 &4947345728116467665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5af68ac66df9da40b9acb6d712aebd8, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: d38d61fdcfb51294fb8b78dbae6c80c4
+  position: {x: 897, y: 150}
+  blackboard: {fileID: 0}
+  description: IS ENEMY NEARBY
+  message: 
 --- !u!114 &5847397463850491619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +462,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 0866899aa64a25a42a768ee558b306ca
-  position: {x: 2988, y: -69}
+  position: {x: 3630.4333, y: -32.936348}
   blackboard: {fileID: 0}
   description: Move the herd towards the target
   children:
@@ -441,7 +483,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 1f61e9f31c5f66f46b91d09d2d8e8ab1
-  position: {x: 2503.7075, y: 57.000053}
+  position: {x: 2992, y: 149}
   blackboard: {fileID: 0}
   description: Move to center of the herd if too far
   children:
@@ -463,7 +505,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: e56a8fd581886cf458d102fb1664938b
-  position: {x: 1430.7489, y: 834.84094}
+  position: {x: 2325, y: 912}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &7334848336328972066
@@ -482,7 +524,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 26510093f7074ac49aa3200ed7cd0754
-  position: {x: 2996, y: 96}
+  position: {x: 3638.4333, y: 132.06364}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &7642203562680074509
@@ -501,7 +543,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 9811b9b851bbbef4aabc2c161506fd3a
-  position: {x: 1430.7489, y: 671.84094}
+  position: {x: 2325, y: 749}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: 7311481799798871802}
