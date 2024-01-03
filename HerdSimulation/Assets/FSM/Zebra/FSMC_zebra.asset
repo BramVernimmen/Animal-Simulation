@@ -32,6 +32,10 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 308605494450978836
+      type: {class: Wander, ns: , asm: Assembly-CSharp}
+      data:
+        enabled: 1
     - rid: 7632661984103104516
       type: {class: FSMC_BoolParameter, ns: FSMC.Runtime, asm: FSMC.Runtime}
       data:
@@ -48,9 +52,9 @@ MonoBehaviour:
       type: {class: FSMC_State, ns: FSMC.Runtime, asm: FSMC.Runtime}
       data:
         _behaviours:
-        - rid: 7632661984103104536
-        Position: {x: 810, y: 178}
-        _name: MoveToCenter
+        - rid: 308605494450978836
+        Position: {x: 830, y: 178}
+        _name: Wander
         TransitionsFrom:
         - rid: 7632661984103104530
         - rid: 7632661984103104532
@@ -62,7 +66,7 @@ MonoBehaviour:
       data:
         _behaviours:
         - rid: 7632661984103104542
-        Position: {x: 528, y: 340}
+        Position: {x: 527, y: 340}
         _name: MoveToGrass
         TransitionsFrom:
         - rid: 7632661984103104526
@@ -91,7 +95,7 @@ MonoBehaviour:
           rid: 7632661984103104522
         _destinationState:
           rid: 7632661984103104519
-        _name: MoveToGrass->MoveToCenter
+        _name: MoveToGrass->Wa
     - rid: 7632661984103104527
       type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
       data:
@@ -109,7 +113,7 @@ MonoBehaviour:
           rid: 7632661984103104523
         _destinationState:
           rid: 7632661984103104519
-        _name: MoveToWater->MoveToCenter
+        _name: MoveToWater->Wa
     - rid: 7632661984103104529
       type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
       data:
@@ -127,7 +131,7 @@ MonoBehaviour:
           rid: 7632661984103104519
         _destinationState:
           rid: 7632661984103104522
-        _name: MoveToCenter->MoveToGrass
+        _name: Wa->MoveToGrass
     - rid: 7632661984103104531
       type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
       data:
@@ -145,7 +149,7 @@ MonoBehaviour:
           rid: 7632661984103104519
         _destinationState:
           rid: 7632661984103104523
-        _name: MoveToCenter->MoveToWater
+        _name: Wa->MoveToWater
     - rid: 7632661984103104533
       type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
       data:
@@ -163,7 +167,7 @@ MonoBehaviour:
           rid: 7632661984103104522
         _destinationState:
           rid: 7632661984103104523
-        _name: MoveToGrass->MoveToWater
+        _name: MoveToWater->Dead
     - rid: 7632661984103104535
       type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
       data:
@@ -171,10 +175,6 @@ MonoBehaviour:
         parameter:
           rid: 7632661984103104517
         Value: 1
-    - rid: 7632661984103104536
-      type: {class: MoveToCenter, ns: , asm: Assembly-CSharp}
-      data:
-        enabled: 1
     - rid: 7632661984103104537
       type: {class: FSMC_BoolParameter, ns: FSMC.Runtime, asm: FSMC.Runtime}
       data:
@@ -200,7 +200,7 @@ MonoBehaviour:
           rid: -2
         _destinationState:
           rid: 7632661984103104538
-        _name: Any->Dead
+        _name: Any->Wander
     - rid: 7632661984103104540
       type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
       data:

@@ -12,6 +12,9 @@ public class ZebraHerd : MonoBehaviour
     public List<GameObject> _zebraList = new List<GameObject>();
     private List<GameObject> _grassFields = new List<GameObject>();
     private List<GameObject> _waterSpots = new List<GameObject>();
+    public Vector3 _herdTarget;
+    public Vector2 _herdTargetRangeX;
+    public Vector2 _herdTargetRangeZ;
 
     void Start()
     {
@@ -26,10 +29,12 @@ public class ZebraHerd : MonoBehaviour
 
         if (_useFSM)
         {
+            zebraPrefab.GetComponent<FSMC_Executer>().enabled = true;
             zebraPrefab.GetComponent<BehaviourTreeRunner>().enabled = false;
         }
         else
         {
+            zebraPrefab.GetComponent<BehaviourTreeRunner>().enabled = true;
             zebraPrefab.GetComponent<FSMC_Executer>().enabled = false;
         }
 
@@ -50,7 +55,8 @@ public class ZebraHerd : MonoBehaviour
             _zebraList.Add(newZebra);
         }
 
-        
+        RandomizeTarget();
+        StartCoroutine(ChangeTarget());
     }
 
     void Update()
@@ -80,5 +86,20 @@ public class ZebraHerd : MonoBehaviour
         center.y = 0.0f;
 
         return center;
+    }
+
+    IEnumerator ChangeTarget()
+    {
+        yield return new WaitForSeconds(5.0f);
+
+        RandomizeTarget();
+
+        StartCoroutine(ChangeTarget());
+    }
+
+    void RandomizeTarget()
+    {
+        _herdTarget.x = Random.Range(_herdTargetRangeX.x, _herdTargetRangeX.y);
+        _herdTarget.z = Random.Range(_herdTargetRangeZ.x, _herdTargetRangeZ.y);
     }
 }

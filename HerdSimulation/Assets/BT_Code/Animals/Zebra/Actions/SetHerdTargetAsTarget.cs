@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShouldAnimalDrink : ActionNode
+public class SetHerdTargetAsTarget : ActionNode
 {
+    BB_Zebra zebraBlackboard;
     protected override void OnStart()
     {
+        zebraBlackboard = (blackboard as BB_Zebra);
     }
 
     protected override void OnStop()
@@ -14,11 +16,8 @@ public class ShouldAnimalDrink : ActionNode
 
     protected override State OnUpdate()
     {
-        if (blackboard.stats._hunger <= 10.0f || !blackboard.stats._isHungry)
-        {
-            return State.Success;
-        }
+        zebraBlackboard.targetPostion = zebraBlackboard.herd._herdTarget;
 
-        return State.Failure;
+        return State.Success;
     }
 }

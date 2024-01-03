@@ -55,7 +55,7 @@ public class BaseAnimalStats : MonoBehaviour
                 _executer.SetBool("IsHungry", true);
             }
         }
-        else
+        else if (_hunger <= 10.0f)
         {
             _isHungry = false;
             if (_useFSM)
@@ -73,7 +73,7 @@ public class BaseAnimalStats : MonoBehaviour
                 _executer.SetBool("IsThirsty", true);
             }
         }
-        else 
+        else if (_thirst <= 10.0f)
         { 
             _isThirsty = false;
             if (_useFSM)

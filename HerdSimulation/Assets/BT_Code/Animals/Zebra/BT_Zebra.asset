@@ -16,7 +16,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 65448a09353993b478c10011372df00e
-  position: {x: 1895, y: 297.3034}
+  position: {x: 1612.4525, y: 483.5}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &-8308622506841959720
@@ -35,12 +35,11 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 8bec5f6ac7632e649a70a255b0f88f72
-  position: {x: 1506, y: 534.30334}
+  position: {x: 1242.3113, y: 534.00006}
   blackboard: {fileID: 0}
   description: Handles thirst
   children:
   - {fileID: 7642203562680074509}
-  - {fileID: -364151513789697219}
   - {fileID: -339863190701927422}
 --- !u!114 &-7126194554121147389
 MonoBehaviour:
@@ -87,7 +86,7 @@ MonoBehaviour:
   children:
   - {fileID: 1839120160800690554}
   - {fileID: -8308622506841959720}
---- !u!114 &-5522658999644863549
+--- !u!114 &-5451357823854676241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,17 +95,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1788d1d21efd88e4182be899a0f85523, type: 3}
-  m_Name: ShouldAnimalDrink
+  m_Script: {fileID: 11500000, guid: 7670b600e62ccb54480c19fc6b2ca31d, type: 3}
+  m_Name: IsAnimalThirsty
   m_EditorClassIdentifier: 
   state: 0
   started: 0
   finished: 0
-  guid: bab51fdd0b67ae6459acbdadf55fdae8
-  position: {x: 1655.9998, y: 873.30334}
+  guid: c09f2131416f2fa4aaf88a3b054293ca
+  position: {x: 2589.3513, y: 448.99997}
   blackboard: {fileID: 0}
   description: 
---- !u!114 &-5228516871818030753
+--- !u!114 &-3397867383099023812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,11 +120,30 @@ MonoBehaviour:
   state: 0
   started: 0
   finished: 0
-  guid: 4927c840b0fef42438e914276c0401f3
-  position: {x: 678.9999, y: 723.3033}
+  guid: fb0ad4d34a9cfca4f89a4dc1892ebc57
+  position: {x: 3286.9692, y: 83.00001}
+  blackboard: {fileID: 0}
+  description: NOT on a failure will make sure we return success
+  child: {fileID: 6496280882826365270}
+--- !u!114 &-3069166325568657645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf593f019b1dc04bbb9ad103eb6e21a, type: 3}
+  m_Name: IsAnimalHungry
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 74632ede62ba291468e450edbd3b7743
+  position: {x: 2359.351, y: 448.99997}
   blackboard: {fileID: 0}
   description: 
-  child: {fileID: -45580133774683601}
 --- !u!114 &-2190108291923958443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,10 +160,10 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 4fb638832fbb251499378b09fc1bc13d
-  position: {x: 2142, y: 294.30328}
+  position: {x: 1868.7972, y: 354}
   blackboard: {fileID: 0}
   description: 
---- !u!114 &-364151513789697219
+--- !u!114 &-364116096551166676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,17 +172,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
-  m_Name: NotNode
+  m_Script: {fileID: 11500000, guid: a66e7d9820ae04144a92aeb787a315af, type: 3}
+  m_Name: SequencerNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
   finished: 0
-  guid: d9bcaf57600c2874096a5eebb5db91f7
-  position: {x: 1655.9998, y: 710.30334}
+  guid: 4ac267753fe511f47885cf25d995c413
+  position: {x: 1740.7972, y: 190.99998}
   blackboard: {fileID: 0}
-  description: 
-  child: {fileID: -5522658999644863549}
+  description: Move to center of the herd if too far
+  children:
+  - {fileID: 6546598042536285388}
+  - {fileID: -2190108291923958443}
 --- !u!114 &-339863190701927422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +201,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 76e955f8ad03dd441b615d1b6876da6a
-  position: {x: 1895, y: 723.3033}
+  position: {x: 1529.3112, y: 710.0001}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &-54314699897943042
@@ -204,25 +224,6 @@ MonoBehaviour:
   blackboard: {fileID: 0}
   description: 
   child: {fileID: -7126194554121147389}
---- !u!114 &-45580133774683601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c59108e27a9a36b43aac247c1750bb43, type: 3}
-  m_Name: ShouldAnimalEat
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  finished: 0
-  guid: a6a7e5799f03b8d43b966db6c90691f7
-  position: {x: 678.9999, y: 886.3032}
-  blackboard: {fileID: 0}
-  description: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,25 +244,50 @@ MonoBehaviour:
   - {fileID: -7126194554121147389}
   - {fileID: 3270311101847899755}
   - {fileID: 5847397463850491619}
-  - {fileID: 6584944266295814740}
   - {fileID: -9183882663977896613}
   - {fileID: 1839120160800690554}
   - {fileID: -8308622506841959720}
-  - {fileID: -45580133774683601}
-  - {fileID: -5522658999644863549}
   - {fileID: 3844052164895048921}
   - {fileID: 7311481799798871802}
   - {fileID: 3251566598446683462}
-  - {fileID: -5228516871818030753}
   - {fileID: 7642203562680074509}
-  - {fileID: -364151513789697219}
   - {fileID: 2142134105501262616}
   - {fileID: -339863190701927422}
   - {fileID: -2190108291923958443}
   - {fileID: -6109576055047359904}
   - {fileID: 2859121464427361582}
   - {fileID: 949156468439346580}
+  - {fileID: -364116096551166676}
+  - {fileID: 6496280882826365270}
+  - {fileID: -3397867383099023812}
+  - {fileID: 7936475282337093884}
+  - {fileID: 898901359787468316}
+  - {fileID: -3069166325568657645}
+  - {fileID: -5451357823854676241}
+  - {fileID: 1344971906847261826}
+  - {fileID: 1641841194526329025}
+  - {fileID: 6546598042536285388}
   blackboard: {fileID: 0}
+--- !u!114 &898901359787468316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
+  m_Name: NotNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 56057144f43e19b4987b47e17f1caef8
+  position: {x: 2359.351, y: 340}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: -3069166325568657645}
 --- !u!114 &949156468439346580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +308,45 @@ MonoBehaviour:
   blackboard: {fileID: 0}
   description: 
   child: {fileID: -6109576055047359904}
+--- !u!114 &1344971906847261826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
+  m_Name: NotNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: e0aa9c1ef4e6282429962e0dd25f73d3
+  position: {x: 2589.3513, y: 340}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: -5451357823854676241}
+--- !u!114 &1641841194526329025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32323e9d4505ee74cb4dd5a4a3b7e155, type: 3}
+  m_Name: SetHerdTargetAsTarget
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 5b339466633a669468d63ad71252c391
+  position: {x: 2804.3513, y: 340}
+  blackboard: {fileID: 0}
+  description: 
 --- !u!114 &1839120160800690554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,12 +363,11 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: b7ddc4c96a9da734aa9d27ecc5f9dfc7
-  position: {x: 603.9999, y: 534.30334}
+  position: {x: 704, y: 534}
   blackboard: {fileID: 0}
   description: Handles hunger
   children:
   - {fileID: 3251566598446683462}
-  - {fileID: -5228516871818030753}
   - {fileID: 2142134105501262616}
 --- !u!114 &2142134105501262616
 MonoBehaviour:
@@ -321,7 +385,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 2a0f07687aa5f224b966984cc027ccbe
-  position: {x: 945, y: 723.3033}
+  position: {x: 929.00006, y: 723.00006}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &2859121464427361582
@@ -340,12 +404,14 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 8b08e8d6c335b2c41bfccf5b9551f8a9
-  position: {x: 1039.9999, y: -71.69659}
+  position: {x: 1824.0004, y: -46.500015}
   blackboard: {fileID: 0}
   description: 
   children:
   - {fileID: 949156468439346580}
-  - {fileID: 6584944266295814740}
+  - {fileID: -364116096551166676}
+  - {fileID: 7936475282337093884}
+  - {fileID: -3397867383099023812}
 --- !u!114 &3251566598446683462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,7 +428,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 3174ff6ed3601c34abed2cd42d9a92b1
-  position: {x: 413.99988, y: 723.3033}
+  position: {x: 704, y: 723.00006}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: 3844052164895048921}
@@ -401,7 +467,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 29147594cbedfe245a2e5a42b45b6e01
-  position: {x: 413.99988, y: 886.3032}
+  position: {x: 704, y: 886.00006}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &5847397463850491619
@@ -420,12 +486,12 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 0866899aa64a25a42a768ee558b306ca
-  position: {x: 2682.9998, y: -71.69659}
+  position: {x: 3634.3599, y: -165}
   blackboard: {fileID: 0}
   description: Move the herd towards the target
   children:
   - {fileID: 7334848336328972066}
---- !u!114 &6584944266295814740
+--- !u!114 &6496280882826365270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -434,19 +500,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9d41ebbfece92449aaac6f96fee7e46, type: 3}
-  m_Name: SelectorNode
+  m_Script: {fileID: 11500000, guid: 9570a2e82dd858f4097cad42b6607fe4, type: 3}
+  m_Name: FailureNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
   finished: 0
-  guid: 1f61e9f31c5f66f46b91d09d2d8e8ab1
-  position: {x: 2044.9998, y: 110.303375}
+  guid: 99baa1693d395d84aac988b4a7fc798e
+  position: {x: 3286.9692, y: 240.99998}
   blackboard: {fileID: 0}
-  description: Move to center of the herd if too far
-  children:
-  - {fileID: -9183882663977896613}
-  - {fileID: -2190108291923958443}
+  description: 
+--- !u!114 &6546598042536285388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
+  m_Name: NotNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 9e74a13f4739b9441816de49e40c86b7
+  position: {x: 1627.1575, y: 356.00003}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: -9183882663977896613}
 --- !u!114 &7311481799798871802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,7 +546,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: e56a8fd581886cf458d102fb1664938b
-  position: {x: 1377.9998, y: 873.30334}
+  position: {x: 1242.3113, y: 873.0001}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &7334848336328972066
@@ -482,7 +565,7 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 26510093f7074ac49aa3200ed7cd0754
-  position: {x: 2691, y: 93.30339}
+  position: {x: 3642.3599, y: 0}
   blackboard: {fileID: 0}
   description: 
 --- !u!114 &7642203562680074509
@@ -501,7 +584,30 @@ MonoBehaviour:
   started: 0
   finished: 0
   guid: 9811b9b851bbbef4aabc2c161506fd3a
-  position: {x: 1377.9998, y: 710.30334}
+  position: {x: 1242.3113, y: 710.0001}
   blackboard: {fileID: 0}
   description: 
   child: {fileID: 7311481799798871802}
+--- !u!114 &7936475282337093884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66e7d9820ae04144a92aeb787a315af, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: d319fb9779661fa49b9dbb3f71fe2434
+  position: {x: 2466.3513, y: 190.99997}
+  blackboard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 898901359787468316}
+  - {fileID: 1344971906847261826}
+  - {fileID: 1641841194526329025}
