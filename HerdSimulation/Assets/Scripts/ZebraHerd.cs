@@ -12,6 +12,7 @@ public class ZebraHerd : MonoBehaviour
     public List<GameObject> _zebraList = new List<GameObject>();
     private List<GameObject> _grassFields = new List<GameObject>();
     private List<GameObject> _waterSpots = new List<GameObject>();
+    private Vector3 _herdCenter;
     public Vector3 _herdTarget;
     public Vector2 _herdTargetRangeX;
     public Vector2 _herdTargetRangeZ;
@@ -70,9 +71,16 @@ public class ZebraHerd : MonoBehaviour
                 return;
             }
         }
+
+        RecalculateHerdCenter();
     }
 
     public Vector3 GetHerdCenter()
+    {
+        return _herdCenter;
+    }
+
+    void RecalculateHerdCenter()
     {
         Vector3 center = Vector3.zero;
 
@@ -85,7 +93,7 @@ public class ZebraHerd : MonoBehaviour
         center /= _zebraList.Count;
         center.y = 0.0f;
 
-        return center;
+        _herdCenter = center;
     }
 
     IEnumerator ChangeTarget()

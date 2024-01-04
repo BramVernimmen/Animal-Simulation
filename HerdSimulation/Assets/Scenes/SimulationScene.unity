@@ -835,8 +835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zebraPrefab: {fileID: 5795110225746031907, guid: 3f4ee35c30c676d4385720c525d7b775, type: 3}
-  _amountToSpawn: 450
-  _useFSM: 1
+  _amountToSpawn: 600
+  _useFSM: 0
   _zebraList: []
   _herdTarget: {x: 0, y: 0, z: 0}
   _herdTargetRangeX: {x: -150, y: 150}
