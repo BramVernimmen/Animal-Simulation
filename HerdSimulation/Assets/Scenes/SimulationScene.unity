@@ -217,6 +217,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &167330448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167330450}
+  - component: {fileID: 167330449}
+  m_Layer: 0
+  m_Name: ZEBRA HERD (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &167330449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167330448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4489c10de1f27c243b480eb46262f896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zebraPrefab: {fileID: 5795110225746031907, guid: 3f4ee35c30c676d4385720c525d7b775, type: 3}
+  _amountToSpawn: 200
+  _useFSM: 1
+  _zebraList: []
+  _herdTarget: {x: 0, y: 0, z: 0}
+  _herdTargetRangeX: {x: -150, y: 150}
+  _herdTargetRangeZ: {x: -150, y: 150}
+--- !u!4 &167330450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167330448}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -65.8, y: 0, z: 90.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &414223969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -624,6 +675,7 @@ Transform:
   - {fileID: 2002802503}
   - {fileID: 1556340259}
   - {fileID: 846489117}
+  - {fileID: 1809139928}
   - {fileID: 729701593}
   - {fileID: 2085818821}
   m_Father: {fileID: 0}
@@ -738,6 +790,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702737370}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &715316055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715316057}
+  - component: {fileID: 715316056}
+  m_Layer: 0
+  m_Name: ZEBRA HERD (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &715316056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715316055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4489c10de1f27c243b480eb46262f896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zebraPrefab: {fileID: 5795110225746031907, guid: 3f4ee35c30c676d4385720c525d7b775, type: 3}
+  _amountToSpawn: 200
+  _useFSM: 1
+  _zebraList: []
+  _herdTarget: {x: 0, y: 0, z: 0}
+  _herdTargetRangeX: {x: -150, y: 150}
+  _herdTargetRangeZ: {x: -150, y: 150}
+--- !u!4 &715316057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715316055}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.7, y: 0, z: -26.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &729701593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3344556217165266784, guid: e1b2562b21ebf73458f99a23e195689a, type: 3}
@@ -835,8 +938,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zebraPrefab: {fileID: 5795110225746031907, guid: 3f4ee35c30c676d4385720c525d7b775, type: 3}
-  _amountToSpawn: 600
-  _useFSM: 0
+  _amountToSpawn: 200
+  _useFSM: 1
   _zebraList: []
   _herdTarget: {x: 0, y: 0, z: 0}
   _herdTargetRangeX: {x: -150, y: 150}
@@ -1291,6 +1394,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801194854}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1809139927
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 527811775}
+    m_Modifications:
+    - target: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -120.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755330455989725753, guid: daea2981684b3b9409376016cd057658, type: 3}
+      propertyPath: m_Name
+      value: Water (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: daea2981684b3b9409376016cd057658, type: 3}
+--- !u!4 &1809139928 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 322656207332343628, guid: daea2981684b3b9409376016cd057658, type: 3}
+  m_PrefabInstance: {fileID: 1809139927}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2002802503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3344556217165266784, guid: e1b2562b21ebf73458f99a23e195689a, type: 3}
@@ -1367,3 +1532,5 @@ SceneRoots:
   - {fileID: 22457428}
   - {fileID: 527811775}
   - {fileID: 1014141656}
+  - {fileID: 167330450}
+  - {fileID: 715316057}
