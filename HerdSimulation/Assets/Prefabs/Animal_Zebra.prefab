@@ -253,7 +253,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5795110225746031907}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 034a519164a4b2d4f9a41a4c5cc9d715, type: 3}
   m_Name: 
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5795110225746031907}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d7f4d8633f97ce45bbc75a0d23f36af, type: 3}
   m_Name: 
@@ -295,6 +295,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   waterSpots:
+  - {fileID: 0}
   - {fileID: 0}
   herd: {fileID: 0}
 --- !u!54 &689365218595245446

@@ -45,8 +45,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _health: 0
-  _hunger: 100
+  _currentHealth: 0
+  _hunger: 0
   _hungerTick: 5
-  _thirst: 100
+  _thirst: 0
   _thirstTick: 2
+  _maxSpeed: 0
+  _minSpeed: 0
+  _currentSpeed: 0
+  _starveStrength: 0
+  _healStrength: 0
+  _isHungry: 0
+  _isEating: 0
+  _isThirsty: 0
+  _isDrinking: 0
+  _deadMaterial: {fileID: 0}
+  _body: {fileID: 0}
