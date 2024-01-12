@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5970001689617806629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77767315a33e5d54d90e1e699e944b33, type: 3}
+  m_Name: NotNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: d6d3d436cb246d1498b0343dfd1a5d64
+  position: {x: 450, y: 342}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: 7669575944073335177}
+--- !u!114 &-4648595820278435496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954465d20ffe7f4eafec853dad9a2c7, type: 3}
+  m_Name: DestroyPrey
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: fcf126e1f69cdcd468876d2ac231d477
+  position: {x: 127, y: 471}
+  blackboard: {fileID: 0}
+  description: 
+--- !u!114 &-4214266917804290580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66e7d9820ae04144a92aeb787a315af, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: fb570a384c713ea44bac9ad3541e7ede
+  position: {x: 52, y: 320}
+  blackboard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -3119986807514027315}
+  - {fileID: -4648595820278435496}
+--- !u!114 &-3119986807514027315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab36a700f7c2fd49bc79ffb804cfc5e, type: 3}
+  m_Name: PreyNearby
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: c5ee0c5112a4ada478e8bdf57e83f3c5
+  position: {x: -78, y: 471}
+  blackboard: {fileID: 0}
+  description: 
+  radius: 5
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc72b5ffb2bc0e44b8d42869f4859488, type: 3}
+  m_Name: Animal
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 7087317881110765549}
+  treeState: 0
+  nodes:
+  - {fileID: 7087317881110765549}
+  - {fileID: 395758407900061996}
+  - {fileID: -5970001689617806629}
+  - {fileID: 7669575944073335177}
+  - {fileID: -4214266917804290580}
+  - {fileID: -3119986807514027315}
+  - {fileID: -4648595820278435496}
+  blackboard: {fileID: 0}
+--- !u!114 &395758407900061996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d41ebbfece92449aaac6f96fee7e46, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 0794d2ce72af2094e9efb2b30ceaad6a
+  position: {x: 300, y: 149}
+  blackboard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -4214266917804290580}
+  - {fileID: -5970001689617806629}
+--- !u!114 &7087317881110765549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de36f9f9ca17c845be83584b9501009, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 4951b1c2624eb834c8a0c06a6e377502
+  position: {x: 300, y: -1}
+  blackboard: {fileID: 0}
+  description: 
+  child: {fileID: 395758407900061996}
+--- !u!114 &7669575944073335177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9570a2e82dd858f4097cad42b6607fe4, type: 3}
+  m_Name: FailureNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  finished: 0
+  guid: 4565b3d68715c4c4db8f3de0b4740fde
+  position: {x: 450, y: 470.68}
+  blackboard: {fileID: 0}
+  description: 

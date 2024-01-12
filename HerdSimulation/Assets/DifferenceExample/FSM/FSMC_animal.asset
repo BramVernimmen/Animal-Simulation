@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ece13e57ab2a54e80667f7d20c2544, type: 3}
+  m_Name: FSMC_animal
+  m_EditorClassIdentifier: 
+  StartPosition: {x: 200, y: 200}
+  AnyPosition: {x: 200, y: 586}
+  States:
+  - rid: 308605698812149760
+  - rid: 308605698812149761
+  AnyTransitions: []
+  StartingState:
+    rid: 308605698812149760
+  Parameters:
+  - rid: 308605698812149764
+  - rid: 308605698812149768
+  references:
+    version: 2
+    RefIds:
+    - rid: 308605698812149760
+      type: {class: FSMC_State, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _behaviours: []
+        Position: {x: 680, y: 200}
+        _name: Idle
+        TransitionsFrom:
+        - rid: 308605698812149762
+        TransitionsTo:
+        - rid: 308605698812149763
+    - rid: 308605698812149761
+      type: {class: FSMC_State, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _behaviours:
+        - rid: 308605698812149767
+        Position: {x: 680, y: 433}
+        _name: DemolishPrey
+        TransitionsFrom:
+        - rid: 308605698812149763
+        TransitionsTo:
+        - rid: 308605698812149762
+    - rid: 308605698812149762
+      type: {class: FSMC_Transition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        conditions:
+        - conditions:
+          - rid: 308605698812149765
+        - conditions:
+          - rid: 308605698812149770
+        _originState:
+          rid: 308605698812149760
+        _destinationState:
+          rid: 308605698812149761
+        _name: Idle->D
+    - rid: 308605698812149763
+      type: {class: FSMC_Transition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        conditions: []
+        _originState:
+          rid: 308605698812149761
+        _destinationState:
+          rid: 308605698812149760
+        _name: D->Idle
+    - rid: 308605698812149764
+      type: {class: FSMC_BoolParameter, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _type: 3
+        _name: PreyNearby
+        _value: 0
+    - rid: 308605698812149765
+      type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        comparison: 0
+        parameter:
+          rid: 308605698812149764
+        Value: 1
+    - rid: 308605698812149767
+      type: {class: DemolishPrey, ns: , asm: Assembly-CSharp}
+      data:
+        enabled: 1
+    - rid: 308605698812149768
+      type: {class: FSMC_BoolParameter, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        _type: 2
+        _name: IsPreyNearby
+        _value: 0
+    - rid: 308605698812149770
+      type: {class: FSMC_BoolCondition, ns: FSMC.Runtime, asm: FSMC.Runtime}
+      data:
+        comparison: 0
+        parameter:
+          rid: 308605698812149768
+        Value: 1
